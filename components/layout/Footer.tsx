@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowUpRight, ShieldCheck } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+
 import { Logo } from "@/components/ui/Logo";
 import { GridLines } from "@/components/ui/Backdrop";
 import { getSiteContent } from "@/lib/content/server";
@@ -111,17 +112,9 @@ export async function Footer() {
               {company.headquarters.city} · {company.headquarters.lat.toFixed(2)}°N{" "}
               {company.headquarters.lng.toFixed(2)}°E
             </span>
-            {/* Staff entrance to the CMS — deliberately quiet, but always one click away */}
-            <Link
-              href="/admin"
-              className="hover:border-gold-400/60 inline-flex items-center gap-1.5 rounded-full border border-white/15 px-3 py-1.5 text-white transition-colors hover:text-white"
-              aria-label="Open the admin panel"
-            >
-              <ShieldCheck className="text-gold-400 size-3.5" strokeWidth={2} aria-hidden />
-              Admin Panel
-            </Link>
           </div>
         </div>
+
       </div>
     </footer>
   );

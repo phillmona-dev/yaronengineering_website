@@ -53,7 +53,8 @@ export const metadata: Metadata = {
   },
   twitter: { card: "summary_large_image", title: DEFAULT_TITLE, description: DEFAULT_DESCRIPTION },
   robots: { index: true, follow: true },
-  alternates: { canonical: SITE_URL, types: { "application/rss+xml": `${SITE_URL}/blog/rss.xml` } },
+  alternates: { canonical: SITE_URL },
+
 };
 
 export const viewport: Viewport = {
@@ -81,14 +82,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             url: SITE_URL,
             name: company.name,
             publisher: { "@id": `${SITE_URL}/#organization` },
-            potentialAction: {
-              "@type": "SearchAction",
-              target: {
-                "@type": "EntryPoint",
-                urlTemplate: `${SITE_URL}/blog/search?q={search_term_string}`,
-              },
-              "query-input": "required name=search_term_string",
-            },
           }}
         />
       </body>

@@ -1,7 +1,0 @@
-node_modules
-.next
-backend
-.git
-*.md
-.env*
-!.env.example

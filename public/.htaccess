@@ -1,0 +1,47 @@
+Options -MultiViews
+RewriteEngine On
+
+# ─── Security Headers ───────────────────────────────────────────────────────
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+    Header always set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# ─── Gzip Compression ───────────────────────────────────────────────────────
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+# ─── Browser Caching ────────────────────────────────────────────────────────
+<IfModule mod_expires.c>
+    ExpiresActive On
+    # Next.js _next/static assets have content-hash in filename — cache forever
+    ExpiresByType text/css                  "access plus 1 year"
+    ExpiresByType application/javascript    "access plus 1 year"
+    ExpiresByType image/png                 "access plus 1 month"
+    ExpiresByType image/jpeg                "access plus 1 month"
+    ExpiresByType image/webp                "access plus 1 month"
+    ExpiresByType image/svg+xml             "access plus 1 month"
+    ExpiresByType image/x-icon              "access plus 1 year"
+    ExpiresByType application/json          "access plus 1 hour"
+</IfModule>
+
+# ─── Next.js Static Export Routing ──────────────────────────────────────────
+# Next.js exports each page as /page-name/index.html (trailingSlash mode)
+# Apache can serve these without rewrite rules IF DirectoryIndex is set.
+DirectoryIndex index.html
+
+# ─── API Routes for cPanel (PHP) ──────────────────────────────────────────
+RewriteRule ^api/ai-chat/?$ /api/ai-chat.php [L,QSA]
+
+# Serve .html extension even when URL has no extension
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# Fallback: serve 404.html for unmatched routes
+ErrorDocument 404 /404.html

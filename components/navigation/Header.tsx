@@ -37,11 +37,7 @@ export function Header() {
   }, [pathname]);
 
   const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
-  // Article pages open on a light surface, so the bar must be solid from the first pixel.
-  const forceSolid = /^\/blog\/(?!category\/|tag\/|author\/|search(?:\/|$))[^/]+\/?$/.test(
-    pathname,
-  );
-  const solid = scrolled || panelOpen || forceSolid;
+  const solid = scrolled || panelOpen;
 
   return (
     <m.header

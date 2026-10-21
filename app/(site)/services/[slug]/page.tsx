@@ -19,11 +19,12 @@ import { breadcrumbSchema, pageMetadata, serviceSchema } from "@/lib/utils/seo";
 
 type Params = { slug: string };
 
-/** Built-in services are prerendered; a service added in the admin panel renders on demand. */
+/** Built-in services are prerendered; no dynamic params in static-export mode. */
 export function generateStaticParams(): Params[] {
   return DEFAULT_CONTENT.services.items.map((s) => ({ slug: s.slug }));
 }
-export const dynamicParams = true;
+export const dynamicParams = false;
+
 
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const { slug } = await params;

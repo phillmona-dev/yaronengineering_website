@@ -7,6 +7,15 @@ import { Button } from "@/components/ui/Button";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
+// ---------------------------------------------------------------------------
+// Contact form — submissions are handled by Formspree (free, no backend needed).
+// 1. Create a free account at https://formspree.io
+// 2. Create a form and copy the form ID (e.g. "xvgpkqab")
+// 3. Set NEXT_PUBLIC_FORMSPREE_ID=xvgpkqab in .env.local before building.
+// ---------------------------------------------------------------------------
+const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID ?? "YOUR_FORMSPREE_ID";
+const FORMSPREE_ENDPOINT = `https://formspree.io/f/${FORMSPREE_ID}`;
+
 const SUBJECTS = [
   "ICT infrastructure",
   "Data center facility",
@@ -45,14 +54,14 @@ export function ContactForm() {
 
     setStatus("submitting");
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(data),
       });
-      const json = (await res.json()) as { ok: boolean; message?: string };
-      if (!res.ok || !json.ok) throw new Error(json.message ?? "Request failed");
-      setMessage(json.message ?? "Thank you — we will be in touch shortly.");
+      const json = (await res.json()) as { ok?: boolean; error?: string };
+      if (!res.ok) throw new Error(json.error ?? "Request failed");
+      setMessage("Thank you — your message has been received. Our team will respond within one business day.");
       setStatus("success");
       form.reset();
     } catch (err) {
@@ -62,6 +71,7 @@ export function ContactForm() {
       setStatus("error");
     }
   }
+
 
   if (status === "success") {
     return (

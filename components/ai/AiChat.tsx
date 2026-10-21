@@ -13,21 +13,30 @@ const SUGGESTIONS = [
 
 type Message = { role: "user" | "assistant"; content: string };
 
+// ---------------------------------------------------------------------------
+// AI endpoint:
+// - Locally: handled by serve-static.js proxy
+// - On cPanel: handled by /api/ai-chat.php
+// - Cloudflare Worker: optional if NEXT_PUBLIC_AI_WORKER_URL is set
+// ---------------------------------------------------------------------------
+const AI_ENDPOINT = process.env.NEXT_PUBLIC_AI_WORKER_URL || "/api/ai-chat";
+
 async function askAI(messages: Message[]): Promise<string> {
-  const res = await fetch("/api/ai-chat", {
+  const res = await fetch(AI_ENDPOINT, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ messages }),
   });
 
   if (!res.ok) {
-    const err = await res.json();
-    throw new Error(err.error ?? "Request failed");
+    const err = await res.json().catch(() => ({}));
+    throw new Error((err as { error?: string }).error ?? "Request failed");
   }
 
   const data = await res.json();
-  return data.reply ?? "I couldn't fetch a response right now. Please try again!";
+  return (data as { reply?: string }).reply ?? "I couldn't fetch a response right now. Please try again!";
 }
+
 
 export default function AiChat() {
   const [open, setOpen] = useState(false);

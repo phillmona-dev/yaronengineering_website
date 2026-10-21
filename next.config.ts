@@ -1,44 +1,18 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Static export — generates a plain out/ folder deployable to any web host (cPanel, S3, etc.)
+  output: "export",
   reactStrictMode: true,
   poweredByHeader: false,
   // The dev overlay bubble sits bottom-left, exactly where the WhatsApp button lives.
   devIndicators: false,
   images: {
-    formats: ["image/webp"], // drop AVIF – encoding is CPU-heavy on first request
-    qualities: [70, 75], // slightly lower quality = significantly smaller files
-    minimumCacheTTL: 60 * 60 * 24 * 30, // cache optimised images for 30 days
-    deviceSizes: [360, 640, 768, 1024, 1280, 1440, 1920],
-    // Uploaded media is served by the Spring Boot API (local dev + configured public host).
-    remotePatterns: [
-      { protocol: "http", hostname: "localhost", port: "8080", pathname: "/media/**" },
-      { protocol: "http", hostname: "backend", port: "8080", pathname: "/media/**" },
-      ...(process.env.MEDIA_HOSTNAME
-        ? [
-            {
-              protocol: "https" as const,
-              hostname: process.env.MEDIA_HOSTNAME,
-              pathname: "/media/**",
-            },
-          ]
-        : []),
-    ],
+    // Static export has no Next.js image-optimization server, so images are served as-is.
+    unoptimized: true,
   },
-  output: process.env.NEXT_OUTPUT === "standalone" ? "standalone" : undefined,
-  async headers() {
-    return [
-      {
-        source: "/(.*)",
-        headers: [
-          { key: "X-Content-Type-Options", value: "nosniff" },
-          { key: "X-Frame-Options", value: "SAMEORIGIN" },
-          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
-        ],
-      },
-    ];
-  },
+  // NOTE: headers() is not supported in static export mode — security headers are set via
+  // Nginx / .htaccess on the host instead.
 };
 
 export default nextConfig;

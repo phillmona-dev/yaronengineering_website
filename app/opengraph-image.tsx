@@ -1,10 +1,12 @@
 import { ImageResponse } from "next/og";
 import { company } from "@/lib/data/company";
 
-export const runtime = "edge";
+export const dynamic = "force-static";
 export const alt = `${company.name} — ICT Infrastructure & Cybersecurity`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
+
+
 
 export default function OpenGraphImage() {
   return new ImageResponse(
@@ -37,17 +39,22 @@ export default function OpenGraphImage() {
       <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
         <div
           style={{
-            fontSize: 76,
+            display: "flex",
+            flexWrap: "wrap",
+            fontSize: 72,
             fontWeight: 600,
-            lineHeight: 1.02,
+            lineHeight: 1.1,
             letterSpacing: -2,
             maxWidth: 1000,
           }}
         >
-          Engineering the infrastructure behind a <span style={{ color: "#fbd84a" }}>secure</span>{" "}
-          digital future.
+          <span>Engineering the infrastructure behind a</span>
+          <span style={{ color: "#fbd84a", margin: "0 14px" }}>secure</span>
+          <span>digital future.</span>
         </div>
-        <div style={{ fontSize: 28, color: "#d6e4f9" }}>{company.name} · Addis Ababa, Ethiopia</div>
+        <div style={{ display: "flex", fontSize: 28, color: "#d6e4f9" }}>
+          {company.name} · Addis Ababa, Ethiopia
+        </div>
       </div>
     </div>,
     { ...size },
