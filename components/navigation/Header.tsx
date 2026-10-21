@@ -46,10 +46,10 @@ export function Header() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
       className={cn(
-        "text-foreground fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-500",
+        "text-white fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter,box-shadow] duration-500",
         solid
-          ? "bg-ink-950/80 border-b border-white/[0.06] backdrop-blur-xl"
-          : "border-b border-transparent bg-transparent",
+          ? "bg-[#1540a6]/95 border-b border-white/20 backdrop-blur-xl shadow-[0_8px_32px_rgba(21,64,166,0.35)]"
+          : "bg-[#1540a6] border-b border-white/15 shadow-[0_4px_20px_rgba(21,64,166,0.25)]",
       )}
       onMouseLeave={() => setPanelOpen(false)}
     >
@@ -73,8 +73,8 @@ export function Header() {
                     aria-expanded={isServices ? panelOpen : undefined}
                     onFocus={() => isServices && setPanelOpen(true)}
                     className={cn(
-                      "group text-ink-200 font-display text-body relative inline-flex h-10 items-center px-3.5 font-medium transition-colors duration-300 hover:text-white",
-                      active && "text-white",
+                      "group text-blue-100/90 font-display text-body relative inline-flex h-10 items-center px-3.5 font-medium transition-colors duration-300 hover:text-white",
+                      active && "text-white font-semibold",
                     )}
                   >
                     {item.label}

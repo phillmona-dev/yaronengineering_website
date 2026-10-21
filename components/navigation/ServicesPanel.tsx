@@ -22,7 +22,7 @@ export function ServicesPanel({ open, onClose }: Props) {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -6 }}
           transition={{ duration: 0.3, ease: EASE_OUT_EXPO }}
-          className="bg-ink-950/95 absolute inset-x-0 top-full hidden border-b border-white/[0.06] backdrop-blur-xl lg:block"
+          className="bg-[#0f2d77]/95 absolute inset-x-0 top-full hidden border-b border-white/15 backdrop-blur-xl lg:block shadow-[0_24px_48px_rgba(11,35,95,0.5)]"
           onKeyDown={(e) => e.key === "Escape" && onClose()}
         >
           <div className="container-x grid grid-cols-1 gap-8 py-8 lg:grid-cols-12">
