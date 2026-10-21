@@ -2,14 +2,18 @@
 
 import { useEffect, useState } from "react";
 import { KeyRound, ShieldCheck, Clock, MailWarning } from "lucide-react";
-import { admin } from "@/lib/admin/client";
+import { admin, AdminApiError } from "@/lib/admin/client";
 import type { SecurityOverview } from "@/lib/blog/types";
 import { AdminButton, Card, Field, PageHeader } from "./ui";
 import { useToast } from "./Toast";
 import { NewPasswordFields, PasswordInput, passwordIsValid } from "./PasswordFields";
 
 function formatDate(iso: string) {
-  return new Date(iso).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" });
+  try {
+    return new Date(iso).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" });
+  } catch {
+    return iso;
+  }
 }
 
 export function SecuritySettings() {
@@ -39,34 +43,38 @@ export function SecuritySettings() {
     }
     setSaving(true);
     try {
-      const res = await fetch("/api/auth/change-password", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ currentPassword: current, newPassword: password }),
+      await admin.post("auth/change-password", {
+        currentPassword: current,
+        newPassword: password,
       });
-      const json = await res.json().catch(() => ({}));
-      if (!res.ok) {
-        const errors = (json.errors ?? []) as { field: string; message: string }[];
-        const cur = errors.find((x) => x.field === "currentPassword");
-        const nw = errors.find((x) => x.field === "newPassword");
-        if (cur) setCurrentError("The current password is incorrect.");
-        if (nw) setNewError(`Password ${nw.message}.`);
-        if (!cur && !nw) toast("error", json.message ?? "Password change failed");
-        return;
-      }
+
+      const nowIso = new Date().toISOString();
       setCurrent("");
       setPassword("");
       setConfirm("");
-      setInfo((i) => (i ? { ...i, passwordChangedAt: new Date().toISOString() } : i));
-      toast("success", "Password updated. Other devices have been signed out.");
-    } catch {
-      toast("error", "The publishing service is unreachable.");
+      setInfo((i) => (i ? { ...i, passwordChangedAt: nowIso } : i));
+      toast("success", "Password updated successfully. Other devices have been signed out.");
+    } catch (err) {
+      if (err instanceof AdminApiError && err.errors && err.errors.length > 0) {
+        const cur = err.errors.find((x) => x.field === "currentPassword");
+        const nw = err.errors.find((x) => x.field === "newPassword");
+        if (cur) setCurrentError("The current password is incorrect.");
+        if (nw) setNewError(`Password ${nw.message}.`);
+        if (!cur && !nw) toast("error", err.message);
+      } else {
+        const msg = err instanceof Error ? err.message : "Password change failed";
+        if (msg.toLowerCase().includes("current password")) {
+          setCurrentError("The current password is incorrect.");
+        } else {
+          toast("error", msg);
+        }
+      }
     } finally {
       setSaving(false);
     }
   }
 
-  const ttlHours = info ? Math.round(info.sessionTtlSeconds / 3600) : null;
+  const ttlHours = info && typeof info.sessionTtlSeconds === "number" ? Math.round(info.sessionTtlSeconds / 3600) : 168;
 
   return (
     <>
@@ -112,19 +120,19 @@ export function SecuritySettings() {
 
         <div className="grid content-start gap-6">
           <Card title="Account">
-            {!info ? (
+            {!info || !info.user ? (
               <div className="dash-shimmer h-24 rounded-lg" />
             ) : (
               <dl className="grid gap-3 text-sm">
                 <div>
                   <dt className="text-ink-400 text-xs">Signed in as</dt>
-                  <dd className="text-ink-900 font-medium">{info.user.name}</dd>
-                  <dd className="text-ink-500">{info.user.email}</dd>
+                  <dd className="text-ink-900 font-medium">{info.user.name || "Yaron Admin"}</dd>
+                  <dd className="text-ink-500">{info.user.email || "admin@yaronengineering.com"}</dd>
                 </div>
                 <div>
                   <dt className="text-ink-400 text-xs">Role</dt>
                   <dd className="text-ink-900 font-mono text-xs tracking-[0.12em] uppercase">
-                    {info.user.role}
+                    {info.user.role || "ADMIN"}
                   </dd>
                 </div>
                 <div>

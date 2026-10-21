@@ -1,6 +1,6 @@
 "use client";
 
-import type { ApiError, Page, DashboardStats, ArticleSummary, ArticleDetail, ContactMessage, SiteContentDoc, Category, Tag } from "@/lib/blog/types";
+import type { ApiError, Page, DashboardStats, ArticleSummary, ArticleDetail, ContactMessage, SiteContentDoc, Category, Tag, Author, SecurityOverview, Settings } from "@/lib/blog/types";
 import { DEFAULT_CONTENT } from "@/lib/content/defaults";
 
 export class AdminApiError extends Error {
@@ -186,6 +186,26 @@ const SEED_TAGS: Tag[] = [
   { id: "tag-6", name: "Security", slug: "security", articleCount: 1 },
 ];
 
+const SEED_AUTHORS: Author[] = [
+  {
+    id: "auth-1",
+    name: "Yaron Engineering PLC Team",
+    slug: "yaron-team",
+    position: "Infrastructure & Systems Engineering",
+    bio: "Specialists in enterprise ICT infrastructure, data center facilities, cybersecurity, and cloud integration.",
+    articleCount: 3,
+  },
+];
+
+const SEED_SETTINGS: Settings = {
+  siteTitle: "Yaron Engineering PLC",
+  blogTitle: "Insights & Technical Knowledge Hub",
+  blogTagline: "Engineering insights, technical whitepapers, and industry analysis on enterprise infrastructure and security.",
+  newsletterHeading: "Subscribe to Yaron Engineering Insights",
+  newsletterText: "Stay informed on enterprise data center design, telecom infrastructure, and cyber resilience.",
+  defaultOgImage: null,
+};
+
 function getStored<T>(key: string, seed: T): T {
   if (typeof window === "undefined") return seed;
   try {
@@ -219,6 +239,54 @@ async function simulatedHandler<T>(path: string, method = "GET", body?: unknown)
       role: "ADMIN",
       createdAt: "2024-01-01T00:00:00Z",
     } as T;
+  }
+
+  // Auth security overview
+  if (cleanPath === "auth/security") {
+    let passwordChangedAt: string | null = "2024-03-15T10:00:00Z";
+    if (typeof window !== "undefined") {
+      passwordChangedAt = localStorage.getItem("yaron_admin_pwd_changed_at") || "2024-03-15T10:00:00Z";
+    }
+    const security: SecurityOverview = {
+      user: {
+        id: "1",
+        email: "admin@yaronengineering.com",
+        name: "Yaron Admin",
+        role: "ADMIN",
+        authorSlug: "yaron-team",
+      },
+      passwordChangedAt,
+      sessionTtlSeconds: 604800,
+      passwordMinLength: 10,
+      passwordPolicy: "At least 10 characters, including letters and numbers.",
+      resetEmailEnabled: false,
+    };
+    return security as T;
+  }
+
+  // Auth change password
+  if (cleanPath === "auth/change-password") {
+    const payload = body as { currentPassword?: string; newPassword?: string } | undefined;
+    const current = payload?.currentPassword || "";
+    const newPwd = payload?.newPassword || "";
+    let storedPwd = "YaronAdmin2024!";
+    if (typeof window !== "undefined") {
+      storedPwd = localStorage.getItem("yaron_admin_password") || "YaronAdmin2024!";
+    }
+    if (current !== storedPwd && current !== "YaronAdmin2024!") {
+      throw new AdminApiError(400, {
+        message: "The current password is incorrect.",
+        code: "INVALID_CREDENTIALS",
+        errors: [{ field: "currentPassword", message: "is incorrect" }],
+      });
+    }
+    if (typeof window !== "undefined") {
+      const now = new Date().toISOString();
+      localStorage.setItem("yaron_admin_password", newPwd);
+      localStorage.setItem("yaron_admin_pwd_changed_at", now);
+      document.cookie = "yaron_admin_auth=1; path=/; max-age=604800; SameSite=Lax";
+    }
+    return { success: true, message: "Password updated successfully." } as T;
   }
 
   // Dashboard stats
@@ -382,27 +450,104 @@ async function simulatedHandler<T>(path: string, method = "GET", body?: unknown)
   }
 
   // Categories
-  if (cleanPath === "categories") {
-    return getStored<Category[]>("yaron_categories", SEED_CATEGORIES) as T;
+  if (cleanPath === "categories" || cleanPath.startsWith("categories/")) {
+    const list = getStored<Category[]>("yaron_categories", SEED_CATEGORIES);
+    if (method === "GET") {
+      if (cleanPath === "categories") return list as T;
+      const id = cleanPath.split("/")[1];
+      const found = list.find((c) => c.id === id);
+      return (found || list[0]) as T;
+    }
+    if (method === "POST" && body) {
+      const item = { id: `cat-${Date.now()}`, articleCount: 0, ...(body as Partial<Category>) } as Category;
+      const updated = [...list, item];
+      setStored("yaron_categories", updated);
+      return item as T;
+    }
+    if (method === "PUT" && body) {
+      const id = cleanPath.split("/")[1];
+      const updated = list.map((c) => (c.id === id ? { ...c, ...(body as Partial<Category>) } : c));
+      setStored("yaron_categories", updated);
+      return (updated.find((c) => c.id === id) || body) as T;
+    }
+    if (method === "DELETE") {
+      const id = cleanPath.split("/")[1];
+      const updated = list.filter((c) => c.id !== id);
+      setStored("yaron_categories", updated);
+      return { success: true } as T;
+    }
+    return list as T;
   }
 
   // Tags
-  if (cleanPath === "tags") {
-    return getStored<Tag[]>("yaron_tags", SEED_TAGS) as T;
+  if (cleanPath === "tags" || cleanPath.startsWith("tags/")) {
+    const list = getStored<Tag[]>("yaron_tags", SEED_TAGS);
+    if (method === "GET") {
+      if (cleanPath === "tags") return list as T;
+      const id = cleanPath.split("/")[1];
+      const found = list.find((t) => t.id === id);
+      return (found || list[0]) as T;
+    }
+    if (method === "POST" && body) {
+      const item = { id: `tag-${Date.now()}`, articleCount: 0, ...(body as Partial<Tag>) } as Tag;
+      const updated = [...list, item];
+      setStored("yaron_tags", updated);
+      return item as T;
+    }
+    if (method === "PUT" && body) {
+      const id = cleanPath.split("/")[1];
+      const updated = list.map((t) => (t.id === id ? { ...t, ...(body as Partial<Tag>) } : t));
+      setStored("yaron_tags", updated);
+      return (updated.find((t) => t.id === id) || body) as T;
+    }
+    if (method === "DELETE") {
+      const id = cleanPath.split("/")[1];
+      const updated = list.filter((t) => t.id !== id);
+      setStored("yaron_tags", updated);
+      return { success: true } as T;
+    }
+    return list as T;
   }
 
   // Authors
-  if (cleanPath === "authors") {
-    return [
-      {
-        id: "auth-1",
-        name: "Yaron Engineering PLC Team",
-        slug: "yaron-team",
-        position: "Infrastructure & Systems Engineering",
-        bio: "Specialists in enterprise ICT infrastructure, data center facilities, cybersecurity, and cloud integration.",
-        articleCount: 3,
-      },
-    ] as T;
+  if (cleanPath === "authors" || cleanPath.startsWith("authors/")) {
+    const list = getStored<Author[]>("yaron_authors", SEED_AUTHORS);
+    if (method === "GET") {
+      if (cleanPath === "authors") return list as T;
+      const id = cleanPath.split("/")[1];
+      const found = list.find((a) => a.id === id);
+      return (found || list[0]) as T;
+    }
+    if (method === "POST" && body) {
+      const item = { id: `auth-${Date.now()}`, articleCount: 0, ...(body as Partial<Author>) } as Author;
+      const updated = [...list, item];
+      setStored("yaron_authors", updated);
+      return item as T;
+    }
+    if (method === "PUT" && body) {
+      const id = cleanPath.split("/")[1];
+      const updated = list.map((a) => (a.id === id ? { ...a, ...(body as Partial<Author>) } : a));
+      setStored("yaron_authors", updated);
+      return (updated.find((a) => a.id === id) || body) as T;
+    }
+    if (method === "DELETE") {
+      const id = cleanPath.split("/")[1];
+      const updated = list.filter((a) => a.id !== id);
+      setStored("yaron_authors", updated);
+      return { success: true } as T;
+    }
+    return list as T;
+  }
+
+  // Settings
+  if (cleanPath === "settings") {
+    if (method === "PUT" && body) {
+      const currentSettings = getStored<Settings>("yaron_settings", SEED_SETTINGS);
+      const updated = { ...currentSettings, ...(body as Partial<Settings>) };
+      setStored("yaron_settings", updated);
+      return updated as T;
+    }
+    return getStored<Settings>("yaron_settings", SEED_SETTINGS) as T;
   }
 
   // Media

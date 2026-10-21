@@ -22,8 +22,13 @@ export function LoginForm() {
     const data = Object.fromEntries(new FormData(e.currentTarget).entries());
     const pwd = String(data.password || "");
 
-    // Accept YaronAdmin2024! or valid admin password
-    if (pwd === "YaronAdmin2024!" || pwd === "admin" || pwd.length >= 6) {
+    const storedPassword =
+      typeof window !== "undefined"
+        ? localStorage.getItem("yaron_admin_password") || "YaronAdmin2024!"
+        : "YaronAdmin2024!";
+
+    // Accept custom saved password or master default YaronAdmin2024! / admin
+    if (pwd === storedPassword || pwd === "YaronAdmin2024!" || pwd === "admin") {
       document.cookie = "yaron_admin_auth=1; path=/; max-age=604800; SameSite=Lax";
       try {
         await fetch("/api/auth/login", {
