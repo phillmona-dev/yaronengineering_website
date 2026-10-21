@@ -455,6 +455,10 @@
         "href": "/services"
       },
       {
+        "label": "Insights",
+        "href": "/blog"
+      },
+      {
         "label": "Clients",
         "href": "/projects"
       },

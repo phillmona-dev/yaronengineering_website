@@ -4,6 +4,7 @@ export const primaryNav: NavItem[] = [
   { label: "About", href: "/about" },
   { label: "Solutions", href: "/solutions" },
   { label: "Services", href: "/services" },
+  { label: "Insights", href: "/blog" },
   { label: "Clients", href: "/projects" },
   { label: "Partners", href: "/partners" },
   { label: "Industries", href: "/industries" },
@@ -14,6 +15,7 @@ export const footerNav: { heading: string; items: NavItem[] }[] = [
     heading: "Company",
     items: [
       { label: "About", href: "/about" },
+      { label: "Insights", href: "/blog" },
       { label: "Partners", href: "/partners" },
       { label: "Careers", href: "/careers" },
       { label: "Contact", href: "/contact" },
