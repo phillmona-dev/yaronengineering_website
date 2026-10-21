@@ -277,26 +277,65 @@ async function simulatedHandler<T>(path: string, method = "GET", body?: unknown)
   if (cleanPath === "contact-messages/summary") {
     const messages = getStored<ContactMessage[]>("yaron_messages", SEED_MESSAGES);
     const unread = messages.filter((m) => m.status === "NEW").length;
+    const replied = messages.filter((m) => m.status === "REPLIED").length;
+    const archived = messages.filter((m) => m.status === "ARCHIVED").length;
+    const oneDayAgo = Date.now() - 86400000;
+    const last24h = messages.filter((m) => new Date(m.createdAt).getTime() >= oneDayAgo).length;
     return {
       total: messages.length,
       unread,
-      archived: messages.filter((m) => m.status === "ARCHIVED").length,
+      replied,
+      archived,
+      last24h,
     } as T;
   }
 
   // Contact messages list
   if (cleanPath === "contact-messages") {
     const messages = getStored<ContactMessage[]>("yaron_messages", SEED_MESSAGES);
-    return messages as T;
+    const page: Page<ContactMessage> = {
+      content: messages,
+      page: 0,
+      size: 25,
+      totalElements: messages.length,
+      totalPages: 1,
+      last: true,
+    };
+    return page as T;
   }
 
-  // Mark message status
-  if (cleanPath.startsWith("contact-messages/") && cleanPath.endsWith("/read")) {
-    const id = cleanPath.split("/")[1];
-    const messages = getStored<ContactMessage[]>("yaron_messages", SEED_MESSAGES);
-    const updated = messages.map((m) => (m.id === id ? { ...m, status: "READ" as const } : m));
-    setStored("yaron_messages", updated);
-    return (updated.find((m) => m.id === id) || messages[0]) as T;
+  // Contact messages actions (read, unread, replied, archive, notes, delete)
+  if (cleanPath.startsWith("contact-messages/")) {
+    const parts = cleanPath.split("/");
+    const id = parts[1];
+    const action = parts[2];
+    let messages = getStored<ContactMessage[]>("yaron_messages", SEED_MESSAGES);
+
+    if (method === "DELETE") {
+      messages = messages.filter((m) => m.id !== id);
+      setStored("yaron_messages", messages);
+      return undefined as T;
+    }
+
+    if (method === "PUT" && action === "notes") {
+      const notesVal = body && typeof body === "object" && "notes" in body ? String((body as { notes: string }).notes) : "";
+      messages = messages.map((m) => (m.id === id ? { ...m, notes: notesVal, updatedAt: new Date().toISOString() } : m));
+      setStored("yaron_messages", messages);
+      return (messages.find((m) => m.id === id) || messages[0]) as T;
+    }
+
+    if (action) {
+      const statusMap: Record<string, "NEW" | "READ" | "REPLIED" | "ARCHIVED"> = {
+        read: "READ",
+        unread: "NEW",
+        replied: "REPLIED",
+        archive: "ARCHIVED",
+      };
+      const newStatus = statusMap[action] || "READ";
+      messages = messages.map((m) => (m.id === id ? { ...m, status: newStatus, updatedAt: new Date().toISOString() } : m));
+      setStored("yaron_messages", messages);
+      return (messages.find((m) => m.id === id) || messages[0]) as T;
+    }
   }
 
   // Articles list

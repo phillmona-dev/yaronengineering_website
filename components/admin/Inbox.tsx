@@ -88,7 +88,11 @@ export function Inbox({ user }: { user: User | null }) {
   const applyUpdate = useCallback(
     (m: ContactMessage) => {
       setSelected(m);
-      setPage((p) => (p ? { ...p, content: p.content.map((x) => (x.id === m.id ? m : x)) } : p));
+      setPage((p) => {
+        if (!p) return p;
+        if (Array.isArray(p)) return (p as ContactMessage[]).map((x) => (x.id === m.id ? m : x)) as unknown as Page<ContactMessage>;
+        return { ...p, content: (p.content || []).map((x) => (x.id === m.id ? m : x)) };
+      });
       refreshBadge();
     },
     [refreshBadge],
@@ -261,13 +265,13 @@ export function Inbox({ user }: { user: User | null }) {
                   <div className="dash-shimmer mt-2 h-3 w-3/4 rounded" />
                 </li>
               ))
-            ) : page.content.length === 0 ? (
+            ) : (Array.isArray(page) ? page : (page?.content || [])).length === 0 ? (
               <li className="text-ink-400 p-10 text-center text-sm">
                 <Mail className="mx-auto mb-2 size-5" aria-hidden />
                 No messages{filter ? " in this view" : " yet"}.
               </li>
             ) : (
-              page.content.map((m) => {
+              (Array.isArray(page) ? page : (page?.content || [])).map((m) => {
                 const unread = m.status === "NEW";
                 const active = selected?.id === m.id;
                 return (
