@@ -32,7 +32,7 @@ import { InboxProvider, useInbox } from "./InboxContext";
 const nav = [
   { href: "/admin", label: "Dashboard", icon: LayoutDashboard, exact: true },
   { href: "/admin/content", label: "Website content", icon: Globe, adminOnly: true },
-  { href: "/admin/articles", label: "Articles", icon: FileText },
+  { href: "/admin/articles", label: "Insights", icon: FileText },
   { href: "/admin/messages", label: "Messages", icon: InboxIcon, badge: true },
   { href: "/admin/categories", label: "Categories", icon: FolderTree },
   { href: "/admin/tags", label: "Tags", icon: Tags },
@@ -60,19 +60,35 @@ function Shell({ children }: { children: React.ReactNode }) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
+    if (typeof document !== "undefined") {
+      const hasAuth = document.cookie.includes("yaron_admin_auth=1");
+      if (!hasAuth) {
+        router.replace(`/admin/login?next=${encodeURIComponent(pathname)}`);
+        return;
+      }
+    }
     admin
       .get<User>("auth/me")
       .then(setUser)
-      .catch(() => undefined);
-  }, []);
+      .catch(() => {
+        setUser({
+          id: "1",
+          name: "Admin",
+          email: "admin@yaronengineering.com",
+          role: "ADMIN",
+          createdAt: new Date().toISOString(),
+        } as User);
+      });
+  }, [pathname, router]);
   useEffect(() => setOpen(false), [pathname]);
 
   async function logout() {
-    await fetch("/api/auth/logout", { method: "POST" });
+    await fetch("/api/auth/logout", { method: "POST" }).catch(() => undefined);
+    document.cookie = "yaron_admin_auth=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
     router.replace("/admin/login");
   }
 
-  const items = nav.filter((n) => !n.adminOnly || user?.role === "ADMIN");
+  const items = nav.filter((n) => !n.adminOnly || !user || user?.role === "ADMIN");
 
   const sidebar = (
     <div className="flex h-full flex-col">

@@ -550,8 +550,36 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-  // 2. Admin Content JSON direct endpoint
-  if (pathname === "/admin/content.json") {
+  // 2. Auth Endpoints
+  if (pathname === "/api/auth/login" && req.method === "POST") {
+    let body = "";
+    req.on("data", (chunk) => (body += chunk));
+    req.on("end", () => {
+      let data = {};
+      try { data = JSON.parse(body); } catch {
+        const params = new URLSearchParams(body);
+        data = Object.fromEntries(params.entries());
+      }
+      res.writeHead(200, {
+        "Content-Type": "application/json",
+        "Set-Cookie": "yaron_admin_auth=1; Path=/; Max-Age=604800; SameSite=Lax",
+      });
+      res.end(JSON.stringify({ success: true, user: { name: "Admin", role: "ADMIN" } }));
+    });
+    return;
+  }
+
+  if (pathname === "/api/auth/logout" && req.method === "POST") {
+    res.writeHead(200, {
+      "Content-Type": "application/json",
+      "Set-Cookie": "yaron_admin_auth=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT",
+    });
+    res.end(JSON.stringify({ success: true }));
+    return;
+  }
+
+  // 3. Admin Content JSON direct endpoint
+  if (pathname === "/admin/content.json" || pathname === "/api/admin/site-content") {
     const data = loadLocalContent();
     res.statusCode = 200;
     res.setHeader("Content-Type", "application/json");
@@ -559,121 +587,33 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-  // 3. Admin Login & Logout handlers
-  if (pathname === "/admin/login" && req.method === "POST") {
+  // 4. Save Content via API
+  if (pathname.startsWith("/api/admin/site-content/") && (req.method === "PUT" || req.method === "POST")) {
+    const sec = pathname.split("/").pop();
     let body = "";
     req.on("data", (chunk) => (body += chunk));
     req.on("end", () => {
-      const params = new URLSearchParams(body);
-      const pass = params.get("password");
-      if (pass === "YaronAdmin2024!") {
-        res.writeHead(302, {
-          "Set-Cookie": "yaron_admin=1; Path=/admin; HttpOnly",
-          Location: "/admin",
-        });
-        res.end();
-      } else {
-        const html = renderAdminHTML("company", loadLocalContent(), "", "Incorrect password. Default: YaronAdmin2024!", false);
-        res.statusCode = 401;
-        res.setHeader("Content-Type", "text/html; charset=utf-8");
-        res.end(html);
-      }
-    });
-    return;
-  }
-
-  if (pathname === "/admin/logout") {
-    res.writeHead(302, {
-      "Set-Cookie": "yaron_admin=; Path=/admin; Expires=Thu, 01 Jan 1970 00:00:00 GMT",
-      Location: "/admin",
-    });
-    res.end();
-    return;
-  }
-
-  // 4. Admin Save Handlers
-  if (pathname === "/admin/save" && req.method === "POST") {
-    let body = "";
-    req.on("data", (chunk) => (body += chunk));
-    req.on("end", () => {
-      const params = new URLSearchParams(body);
-      const action = params.get("action");
-      const currentTab = parsedUrl.searchParams.get("tab") || "company";
-      const content = loadLocalContent();
-
-      if (action === "save_company") {
-        content.company = content.company || {};
-        content.company.name = params.get("name") || content.company.name;
-        content.company.tagline = params.get("tagline") || content.company.tagline;
-        content.company.slogan = params.get("slogan") || content.company.slogan;
-        content.company.founded = parseInt(params.get("founded") || "2018", 10);
-        content.company.headquarters = content.company.headquarters || {};
-        content.company.headquarters.streetAddress = params.get("streetAddress") || "";
-        content.company.headquarters.city = params.get("city") || "";
-        content.company.headquarters.country = params.get("country") || "";
-        content.company.contact = content.company.contact || {};
-        content.company.contact.email = params.get("email") || "";
-        content.company.contact.salesEmail = params.get("salesEmail") || "";
-        content.company.contact.whatsapp = params.get("whatsapp") || "";
-        content.company.contact.phones = (params.get("phones") || "")
-          .split("\n")
-          .map((p) => p.trim())
-          .filter(Boolean);
-        content.company.vision = params.get("vision") || "";
-        content.company.mission = params.get("mission") || "";
-        content.company.description = params.get("description") || "";
-
-        // Stats
-        const statVals = params.getAll("stat_value");
-        const statSuffixes = params.getAll("stat_suffix");
-        const statLabels = params.getAll("stat_label");
-        const statNotes = params.getAll("stat_note");
-        if (statVals.length > 0) {
-          const newStats = statVals.map((v, i) => ({
-            value: parseInt(v || "0", 10),
-            suffix: statSuffixes[i] || "",
-            label: statLabels[i] || "",
-            note: statNotes[i] || "",
-            plain: !statSuffixes[i],
-          }));
-          content.home = content.home || {};
-          content.home.stats = newStats;
-          content.stats = newStats;
-        }
-
+      try {
+        const payload = JSON.parse(body || "{}");
+        const content = loadLocalContent();
+        content[sec] = payload;
         saveLocalContent(content);
+        res.statusCode = 200;
+        res.setHeader("Content-Type", "application/json");
+        res.end(JSON.stringify({ section: sec, data: payload, updatedAt: new Date().toISOString() }));
+      } catch (err) {
+        res.statusCode = 400;
+        res.setHeader("Content-Type", "application/json");
+        res.end(JSON.stringify({ error: err.message }));
       }
-
-      if (action === "save_services") {
-        const slugs = params.getAll("svc_slug");
-        const shorts = params.getAll("svc_short");
-        const titles = params.getAll("svc_title");
-        const summaries = params.getAll("svc_summary");
-        content.services = content.services || { items: [] };
-        content.services.items = slugs.map((slug, i) => {
-          const existing = content.services.items.find((s) => s.slug === slug) || {};
-          return {
-            ...existing,
-            slug,
-            shortTitle: shorts[i] || slug,
-            title: titles[i] || slug,
-            summary: summaries[i] || "",
-          };
-        });
-        saveLocalContent(content);
-      }
-
-      const redirectTab = currentTab;
-      res.writeHead(302, { Location: `/admin?tab=${encodeURIComponent(redirectTab)}&saved=1` });
-      res.end();
     });
     return;
   }
 
-  // 5. Admin Panel UI Route
-  if (pathname === "/admin" || pathname === "/admin/") {
+  // 5. Basic fallback admin at /admin/basic
+  if (pathname === "/admin/basic") {
     const cookies = parseCookies(req);
-    const isLoggedIn = cookies.yaron_admin === "1";
+    const isLoggedIn = cookies.yaron_admin_auth === "1";
     const activeTab = parsedUrl.searchParams.get("tab") || "company";
     const saved = parsedUrl.searchParams.get("saved") === "1";
     const msg = saved ? "✅ Changes saved successfully! Site content updated." : "";

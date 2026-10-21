@@ -104,12 +104,20 @@ export function Footer() {
           <p>
             © {year} {company.name}. All rights reserved.
           </p>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center gap-6">
             {legalNav.map((l) => (
               <Link key={l.href} href={l.href} className="hover:text-white">
                 {l.label}
               </Link>
             ))}
+            <Link
+              href="/admin"
+              className="inline-flex items-center gap-1.5 rounded border border-white/10 px-2.5 py-1 text-ink-300 transition-colors hover:border-brand-500/50 hover:bg-white/5 hover:text-white"
+              title="Yaron Engineering CMS Admin Panel"
+            >
+              <span className="size-1.5 rounded-full bg-brand-400" />
+              Admin Panel
+            </Link>
             <span className="hidden md:inline">
               {company.headquarters.city} · {(company.headquarters.lat ?? 9.02).toFixed(2)}°N{" "}
               {(company.headquarters.lng ?? 38.83).toFixed(2)}°E
