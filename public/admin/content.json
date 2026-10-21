@@ -1,0 +1,2337 @@
+{
+  "company": {
+    "name": "Yaron Engineering PLC",
+    "shortName": "Yaron Engineering",
+    "legalName": "Yaron Engineering PLC",
+    "tagline": "ICT Infrastructure & Cybersecurity Systems Integrator",
+    "slogan": "Innovating Infrastructure. Empowering Growth.",
+    "description": "Yaron Engineering PLC delivers enterprise ICT infrastructure, cybersecurity, data center, cloud, enterprise technology and security solutions across Ethiopia and East Africa.",
+    "founded": 2018,
+    "foundedMonth": "August",
+    "headquarters": {
+      "city": "Addis Ababa",
+      "country": "Ethiopia",
+      "countryCode": "ET",
+      "streetAddress": "Mana Building, 4th Floor, Room 414A, Fiyel Bet, CMC Summit",
+      "lat": 9.0192,
+      "lng": 38.8313
+    },
+    "contact": {
+      "email": "tadesse@yaronengineering.com",
+      "salesEmail": "sales@yaronengineering.com",
+      "phones": [
+        "+251 944 159 690",
+        "+251 944 220 055",
+        "+251 944 211 112"
+      ],
+      "whatsapp": "+251 944 159 690",
+      "whatsappE164": "251944159690",
+      "whatsappGreeting": "Hello Yaron Engineering PLC, I would like to discuss a project.",
+      "officeHours": "Monday – Friday, East Africa Time (UTC+3)"
+    },
+    "social": []
+  },
+  "about": {
+    "vision": "By 2035, Yaron Engineering PLC will be among the top 5 leading ICT Infrastructure & Cyber Security system integration and consulting firms in East Africa, recognized for industry-standard solutions and empowering regional digital transformation.",
+    "mission": "We serve our customers with integrity, lead with professionalism, and deliver solutions that have a real impact.",
+    "story": [
+      "Founded in 2018 and headquartered in Addis Ababa, Ethiopia, Yaron Engineering PLC was established with a bold and forward-looking vision: to become the leading ICT and Telecom consulting and system integration firm in Ethiopia and the greater East African region.",
+      "Since inception, Yaron Engineering has successfully delivered more than 30 high-impact projects for more than 40 clients across government institutions, enterprises, NGOs and financial organizations. That growth is built on a reputation for technical excellence, reliability and results-driven execution."
+    ],
+    "storyHeading": "Founded with a bold, forward-looking vision.",
+    "commitment": [
+      "At Yaron Engineering PLC, we do more than deploy systems — we build long-term partnerships rooted in trust, innovation and measurable value. Our customer-centric approach ensures that every solution is designed not just to function, but to empower.",
+      "With a growing network of global technology partners and a strong local delivery team, we are uniquely positioned to help organizations digitally transform, scale securely and operate smarter."
+    ],
+    "coreValues": [
+      {
+        "title": "Professional Excellence & Integrity",
+        "text": "We uphold the highest standards of professionalism and ethical conduct in every service we provide, ensuring trust, transparency and accountability."
+      },
+      {
+        "title": "Customer-Centric Commitment",
+        "text": "Our customers are at the heart of everything we do. We actively listen, respond and adapt to deliver solutions tailored to their unique needs."
+      },
+      {
+        "title": "Earning and Sustaining Customer Loyalty",
+        "text": "We build lasting relationships through consistency, reliability and value — transforming one-time clients into long-term partners."
+      },
+      {
+        "title": "Problem Solving with Purpose",
+        "text": "We approach every challenge with a solution-oriented mindset, delivering innovative, practical answers that address both current issues and future goals."
+      },
+      {
+        "title": "Value Creation for Every Client",
+        "text": "We don't just provide services — we deliver measurable value that enhances our clients' operations, performance and competitive edge."
+      }
+    ],
+    "businessLines": [
+      "Consultancy services",
+      "System integration services",
+      "Training services",
+      "Hardware and software import and supply"
+    ],
+    "businessAreas": [
+      {
+        "title": "Data Center Infrastructure & Facilities",
+        "text": "End-to-end design, construction and modernization of next-generation data center environments — including edge data centers, modular builds, precision cooling and sustainable energy solutions."
+      },
+      {
+        "title": "Data Center Networking",
+        "text": "Ultra-resilient, high-speed data center fabrics using software-defined networking (SDN), EVPN-VXLAN architecture and AI-driven network automation."
+      },
+      {
+        "title": "Enterprise LAN & WAN Solutions",
+        "text": "Intelligent, secure and scalable networking — powered by LAN SDN, SD-WAN, Wi-Fi 6/6E and Wi-Fi 7, network segmentation and cloud-managed infrastructure."
+      },
+      {
+        "title": "Cybersecurity Architecture & Solutions",
+        "text": "Full-spectrum cybersecurity including Zero Trust frameworks, XDR (extended detection and response), AI-powered threat hunting and SOC integration for enterprise resilience."
+      },
+      {
+        "title": "High-Performance Computing & Storage",
+        "text": "HPC clusters, hyper-converged infrastructure (HCI), NVMe storage, GPU-accelerated computing and scalable parallel file systems."
+      },
+      {
+        "title": "Information Security & IT Governance",
+        "text": "Enterprise information security strategies aligned with ISO 27001, NIST, CIS Controls and digital risk governance frameworks — combined with audit readiness and compliance automation."
+      },
+      {
+        "title": "Video Surveillance & Access Control",
+        "text": "Smart physical security with AI-powered video analytics, facial recognition, license plate recognition (LPR), biometric access control and centralized command systems."
+      },
+      {
+        "title": "Cloud Infrastructure & Managed Services",
+        "text": "SaaS, PaaS and IaaS services, with hybrid and multi-cloud architecture and managed operations."
+      },
+      {
+        "title": "ICT Consultancy",
+        "text": "Independent ICT consultancy for core insurance, core banking and ERP solutions, and for national-scale infrastructure programmes."
+      }
+    ],
+    "businessAreasLead": "End-to-end consulting, system integration and training across the full spectrum of ICT and security domains — each solution tailored to organizational goals, performance expectations and regulatory requirements.",
+    "serviceLines": [
+      {
+        "title": "Consultancy services",
+        "text": "Independent design and supervision across every layer of ICT infrastructure.",
+        "items": [
+          "Data center facility design and supervision",
+          "Network design and supervision",
+          "Computing and storage systems design and supervision",
+          "Video surveillance and access control systems design and supervision",
+          "Video and IP telephone communication systems design and supervision",
+          "Cybersecurity systems design and supervision",
+          "ISMS, IT governance and ITSM services",
+          "Cloud services design and implementation"
+        ]
+      },
+      {
+        "title": "System integration services",
+        "text": "End-to-end integration that turns complex, multi-vendor IT and OT technologies into unified, high-performing, secure and scalable ecosystems aligned to business goals and digital transformation strategies.",
+        "items": [
+          "Data center construction",
+          "Network system integration",
+          "Computing and storage systems integration",
+          "Electronic security systems integration",
+          "Video and IP telephone communication systems integration",
+          "Cybersecurity systems integration",
+          "Cloud services integration"
+        ]
+      },
+      {
+        "title": "Hardware & software import and supply",
+        "text": "Sourcing, procurement and delivery of enterprise-grade ICT hardware and software through trusted partnerships with global OEMs and Tier 1 distributors — ensuring genuine products, timely delivery and end-to-end support.",
+        "items": [
+          "Genuine OEM hardware and software",
+          "Global OEM and Tier 1 distributor partnerships",
+          "Timely delivery",
+          "End-to-end support"
+        ]
+      }
+    ],
+    "sectors": [
+      "Government institutions",
+      "Enterprises",
+      "NGOs",
+      "Financial organizations"
+    ],
+    "leadershipRoles": [
+      "Network Engineers",
+      "Data Center Engineers",
+      "ICT Project Managers",
+      "IT Directors",
+      "ICT Sales Managers",
+      "Consultants for national and international ICT infrastructure projects"
+    ],
+    "expertise": {
+      "eyebrow": "Experience & expertise",
+      "years": 20,
+      "heading": "Years of engineering leadership behind every design review.",
+      "lead": "The founding team brings more than 20 years of combined leadership experience, including contributions to Ethiopia's flagship digital transformation initiatives and ICT modernization programmes.",
+      "note": "Leadership profiles and portraits will be published here once official team photography is supplied. We do not use stock or generated people."
+    }
+  },
+  "home": {
+    "meta": {
+      "metaTitle": "Yaron Engineering PLC | ICT Infrastructure & Cybersecurity Solutions",
+      "metaDescription": "Yaron Engineering PLC delivers enterprise ICT infrastructure, cybersecurity, data center, cloud, enterprise technology and security solutions across Ethiopia and East Africa."
+    },
+    "hero": {
+      "badge": "ICT Infrastructure & Cybersecurity Systems Integrator",
+      "titleLines": [
+        "Engineering the",
+        "infrastructure",
+        "behind a secure",
+        "digital future."
+      ],
+      "highlight": "secure",
+      "lead": "Yaron Engineering delivers ICT infrastructure, cybersecurity, cloud, data center and enterprise technology solutions for organizations that cannot afford to compromise.",
+      "primaryCta": {
+        "label": "Explore Our Solutions",
+        "href": "/solutions"
+      },
+      "secondaryCta": {
+        "label": "Talk to Our Experts",
+        "href": "/contact"
+      },
+      "panelNote": "Delivered since 2018",
+      "panelText": "High-impact projects for government, finance and enterprise.",
+      "dataPoints": [
+        {
+          "label": "HQ",
+          "value": "Addis Ababa · 9.02°N 38.83°E"
+        },
+        {
+          "label": "Est.",
+          "value": "2018"
+        },
+        {
+          "label": "Focus",
+          "value": "ICT Infrastructure · Cybersecurity"
+        }
+      ]
+    },
+    "stats": [
+      {
+        "value": 30,
+        "suffix": "+",
+        "label": "High-impact projects",
+        "note": "Delivered since 2018",
+        "plain": false
+      },
+      {
+        "value": 40,
+        "suffix": "+",
+        "label": "Clients served",
+        "note": "Government, enterprise, NGO, finance",
+        "plain": false
+      },
+      {
+        "value": 20,
+        "suffix": "+",
+        "label": "Years combined leadership",
+        "note": "Founding team experience",
+        "plain": false
+      },
+      {
+        "value": 2018,
+        "suffix": "",
+        "label": "Founded",
+        "note": "Addis Ababa, Ethiopia",
+        "plain": true
+      }
+    ],
+    "sections": {
+      "about": {
+        "eyebrow": "About Yaron Engineering",
+        "title": "Built in Addis Ababa to engineer the systems East Africa depends on.",
+        "highlight": "depends on.",
+        "ctaLabel": "Our story and vision"
+      },
+      "services": {
+        "eyebrow": "Core competencies",
+        "title": "Seven disciplines. One accountable team.",
+        "highlight": "One",
+        "lead": "From the physical layer to the security operations center, we design, integrate and support the infrastructure organizations run on.",
+        "ctaLabel": "All services"
+      },
+      "solutions": {
+        "eyebrow": "Solutions",
+        "title": "Technology built around your mission.",
+        "highlight": "your mission.",
+        "lead": "No two institutions share the same objectives, risk posture or growth curve. Every solution we deliver is tailored to the organization it serves — and engineered through one disciplined method.",
+        "ctaLabel": "How we work",
+        "pillarsHeading": "Every solution is tailored to"
+      },
+      "industries": {
+        "eyebrow": "Industries",
+        "title": "Serving the institutions that cannot pause.",
+        "highlight": "cannot pause.",
+        "lead": "Government, finance, healthcare, education, NGOs and critical infrastructure — organizations where reliability and security are obligations, not features.",
+        "ctaLabel": "All industries"
+      },
+      "projects": {
+        "eyebrow": "Experience",
+        "title": "More than 30 high-impact projects. Delivered.",
+        "highlight": "Delivered.",
+        "lead": "A selection of the programmes we have designed, implemented and supervised for the judiciary, banks, public institutions, universities, hospitality and enterprises.",
+        "ctaLabel": "All projects"
+      },
+      "customers": {
+        "eyebrow": "National & Enterprise Partners",
+        "title": "Institutions that trust Yaron Engineering.",
+        "lead": "Mission-critical data center, cybersecurity, and cloud programmes delivered across Ethiopia."
+      },
+      "partners": {
+        "eyebrow": "Global partners",
+        "title": "Powered by global partnerships. Delivered locally.",
+        "highlight": "Delivered locally.",
+        "lead": "Powered by global partnerships, delivered locally. Direct partnerships with globally renowned vendors and regional distributors bring world-class technology to local organizations — and we deliver, support and integrate it across mission-critical environments."
+      },
+      "why": {
+        "eyebrow": "Why Yaron",
+        "title": "Why organizations choose Yaron.",
+        "highlight": "choose Yaron.",
+        "lead": "Six principles that shape how we design, deliver and stand behind critical infrastructure."
+      },
+      "commitment": {
+        "eyebrow": "Our commitment",
+        "titleLine1": "We don't just deploy systems.",
+        "titleLine2": "We build the infrastructure organizations depend on.",
+        "highlight": "organizations depend on.",
+        "outcomes": [
+          {
+            "title": "Digitally transform",
+            "text": "Modern platforms and cloud foundations designed around how the organization actually operates."
+          },
+          {
+            "title": "Scale securely",
+            "text": "Growth on an architecture where segmentation, identity and compliance were designed in from day one."
+          },
+          {
+            "title": "Operate smarter",
+            "text": "Monitoring, documentation and support models that turn infrastructure into a managed capability."
+          }
+        ]
+      }
+    },
+    "finalCta": {
+      "titleLine1": "Let's engineer",
+      "titleLine2": "what's next.",
+      "text": "Tell us what you're building, protecting or transforming. Our team can help architect the infrastructure behind it.",
+      "primary": {
+        "label": "Start a Conversation",
+        "href": "/contact"
+      },
+      "secondary": {
+        "label": "Explore Our Services",
+        "href": "/services"
+      }
+    }
+  },
+  "pages": {
+    "about": {
+      "metaTitle": "About",
+      "metaDescription": "Founded in 2018 in Addis Ababa, Yaron Engineering PLC is an ICT infrastructure and cybersecurity consulting and system integration firm serving Ethiopia and East Africa.",
+      "eyebrow": "About Yaron Engineering",
+      "titleLine1": "A systems integrator built for",
+      "titleLine2": "critical infrastructure.",
+      "highlight": "critical",
+      "lead": "Founded in August 2018 and headquartered in Addis Ababa, Ethiopia."
+    },
+    "services": {
+      "metaTitle": "Services",
+      "metaDescription": "ICT infrastructure, data center design, ICT consultancy, cybersecurity, cloud, enterprise servers and storage, and physical security systems — delivered end to end by Yaron Engineering.",
+      "eyebrow": "Services",
+      "titleLine1": "From the physical layer",
+      "titleLine2": "to the security operations center.",
+      "highlight": "security",
+      "lead": "Seven core competencies, delivered as consulting, system integration, training and supply — by one accountable engineering team.",
+      "deliveryEyebrow": "How we deliver",
+      "deliveryTitle": "Consult, integrate, supply.",
+      "deliveryHighlight": "supply."
+    },
+    "solutions": {
+      "metaTitle": "Solutions",
+      "metaDescription": "Every Yaron Engineering solution is tailored to organizational objectives, performance, regulatory and security requirements, scalability and business continuity.",
+      "eyebrow": "Solutions",
+      "titleLine1": "Technology built around",
+      "titleLine2": "your mission.",
+      "highlight": "mission.",
+      "lead": "One disciplined method — discover, architect, integrate, secure, operate, scale — applied to every organization we serve."
+    },
+    "industries": {
+      "metaTitle": "Industries",
+      "metaDescription": "Yaron Engineering serves government, banking and financial services, insurance, healthcare, NGOs, enterprise, education and critical infrastructure across Ethiopia and East Africa.",
+      "eyebrow": "Industries",
+      "titleLine1": "Serving the institutions",
+      "titleLine2": "that cannot pause.",
+      "highlight": "cannot pause.",
+      "lead": "Eight sectors where reliability, security and compliance are obligations — and where Yaron Engineering has the depth to deliver."
+    },
+    "projects": {
+      "metaTitle": "Projects",
+      "metaDescription": "ICT infrastructure, data center, cybersecurity, surveillance and cloud projects delivered by Yaron Engineering for the judiciary, banks, public institutions, universities, NGOs and enterprises in Ethiopia.",
+      "eyebrow": "Projects & experience",
+      "titleLine1": "Infrastructure delivered",
+      "titleLine2": "for institutions that matter.",
+      "highlight": "matter.",
+      "lead": "More than 30 high-impact projects for more than 40 clients across government institutions, enterprises, NGOs and financial organizations — consultancy, system integration, supply and cloud services.",
+      "categories": [
+        "Data Center Infrastructure",
+        "Enterprise Network Infrastructure",
+        "Cybersecurity Deployment",
+        "Video Surveillance",
+        "Cloud & Business Continuity"
+      ],
+      "indexEyebrow": "Project index",
+      "indexTitle": "Customers and project experience.",
+      "indexHighlight": "experience."
+    },
+    "partners": {
+      "metaTitle": "Partners",
+      "metaDescription": "Yaron Engineering works with leading technology vendors and major Ethiopian enterprises across banking, government, logistics and higher education.",
+      "eyebrow": "Global & domestic partners",
+      "titleLine1": "Partnerships that extend",
+      "titleLine2": "our capability.",
+      "highlight": "capability.",
+      "lead": "We design vendor-neutral and deliver with global technology leaders and leading Ethiopian enterprise institutions.",
+      "customersEyebrow": "Domestic & Enterprise Partners",
+      "customersTitle": "Enterprise partners & clients in Ethiopia.",
+      "customersLead": "Infrastructure, cybersecurity, surveillance and cloud systems delivered for the judiciary, government institutions, banks and microfinance, national enterprises, aviation, hospitality, NGOs and universities."
+    },
+    "careers": {
+      "metaTitle": "Careers",
+      "metaDescription": "Join Yaron Engineering PLC in Addis Ababa and build the ICT infrastructure and cybersecurity systems Ethiopia and East Africa depend on.",
+      "eyebrow": "Careers",
+      "titleLine1": "Engineer the systems",
+      "titleLine2": "a region depends on.",
+      "highlight": "depends on.",
+      "lead": "We hire engineers, consultants and project leaders who want their work to run banks, ministries and universities.",
+      "whyEyebrow": "Why join",
+      "whyHeading": "Serious work, senior mentorship, real impact.",
+      "rolesEyebrow": "Open roles",
+      "rolesHeading": "Current opportunities",
+      "noVacanciesText": "No vacancies are published at the moment. We review speculative applications from experienced network, data center, security and cloud engineers on a rolling basis.",
+      "applyLabel": "Send a speculative application",
+      "finalCta": {
+        "titleLine1": "Build what",
+        "titleLine2": "comes next.",
+        "text": "Tell us about your experience and the problems you want to work on.",
+        "primary": {
+          "label": "Contact Us",
+          "href": "/contact"
+        },
+        "secondary": {
+          "label": "About Yaron",
+          "href": "/about"
+        }
+      }
+    },
+    "contact": {
+      "metaTitle": "Contact",
+      "metaDescription": "Talk to Yaron Engineering PLC in Addis Ababa about ICT infrastructure, data center, cybersecurity, cloud and enterprise technology projects.",
+      "eyebrow": "Contact",
+      "titleLine1": "Let's talk about",
+      "titleLine2": "what you're building.",
+      "highlight": "building.",
+      "lead": "Tell us what you are building, protecting or transforming. An engineer — not a sales script — will respond.",
+      "whatsappLabel": "Chat on WhatsApp",
+      "whatsappNote": "replies during office hours"
+    }
+  },
+  "navigation": {
+    "primary": [
+      {
+        "label": "About",
+        "href": "/about"
+      },
+      {
+        "label": "Solutions",
+        "href": "/solutions"
+      },
+      {
+        "label": "Services",
+        "href": "/services"
+      },
+      {
+        "label": "Clients",
+        "href": "/projects"
+      },
+      {
+        "label": "Partners",
+        "href": "/partners"
+      },
+      {
+        "label": "Industries",
+        "href": "/industries"
+      }
+    ],
+    "footer": [
+      {
+        "heading": "Company",
+        "items": [
+          {
+            "label": "About",
+            "href": "/about"
+          },
+          {
+            "label": "Partners",
+            "href": "/partners"
+          },
+          {
+            "label": "Careers",
+            "href": "/careers"
+          },
+          {
+            "label": "Contact",
+            "href": "/contact"
+          }
+        ]
+      },
+      {
+        "heading": "Expertise",
+        "items": [
+          {
+            "label": "Services",
+            "href": "/services"
+          },
+          {
+            "label": "Solutions",
+            "href": "/solutions"
+          },
+          {
+            "label": "Industries",
+            "href": "/industries"
+          },
+          {
+            "label": "Clients",
+            "href": "/projects"
+          }
+        ]
+      }
+    ],
+    "legal": [
+      {
+        "label": "Privacy Policy",
+        "href": "/privacy"
+      },
+      {
+        "label": "Terms",
+        "href": "/terms"
+      }
+    ],
+    "footerBlurb": "ICT infrastructure and cybersecurity consulting and system integration for government, financial institutions, enterprises and NGOs across Ethiopia and East Africa.",
+    "footerCtaHeading": "Start a project",
+    "footerCtaLabel": "Talk to our engineers"
+  },
+  "services": {
+    "items": [
+      {
+        "slug": "ict-infrastructure",
+        "index": "01",
+        "title": "ICT Infrastructure Systems",
+        "shortTitle": "ICT Infrastructure",
+        "summary": "Enterprise LAN/WAN, SD-WAN, Wi-Fi, data center networking and structured cabling engineered as a single, resilient fabric.",
+        "description": [
+          "Every digital service an organization runs depends on the quality of its network. We design and build enterprise network infrastructure that is deterministic, segmented and ready for the next decade of growth.",
+          "From campus LAN, LAN SDN and SD-WAN to Wi-Fi 6/6E and Wi-Fi 7, network segmentation and cloud-managed infrastructure, our engineers deliver networks that are documented, testable and supportable.",
+          "In the data center we build ultra-resilient, high-speed fabrics using software-defined networking, EVPN-VXLAN architecture and AI-driven automation — and we integrate video and IP telephone communication systems on the same foundation."
+        ],
+        "capabilities": [
+          "LAN / WAN & SD-WAN",
+          "Wi-Fi 6/6E & Wi-Fi 7",
+          "Structured cabling",
+          "Data center networking (SDN, EVPN-VXLAN)",
+          "Video & IP telephony",
+          "Cloud-managed networks"
+        ],
+        "outcomes": [
+          "Predictable performance under peak load",
+          "Segmented, policy-driven architecture",
+          "Certified cabling with full documentation"
+        ],
+        "image": {
+          "src": "/images/photos/network-patch.jpg",
+          "alt": "Patch panel with structured network cabling"
+        },
+        "icon": "network",
+        "theme": "Network infrastructure"
+      },
+      {
+        "slug": "data-center",
+        "index": "02",
+        "title": "Data Center Facility Design & Implementation",
+        "shortTitle": "Data Center",
+        "summary": "Power, cooling, rack systems and monitoring designed for continuous, measurable availability.",
+        "description": [
+          "A data center is a physical system first. We design the facility layer — power distribution, precision cooling, rack and containment systems and environmental monitoring — so the compute layer never has to compensate for it.",
+          "Our approach covers concept design, construction, modernization, implementation supervision and commissioning — from edge and modular data centers to main and disaster-recovery sites — giving organizations a facility they can audit, operate and expand with confidence."
+        ],
+        "capabilities": [
+          "Power systems",
+          "Precision cooling",
+          "Rack & aisle containment",
+          "Edge & modular data centers",
+          "Fire detection & suppression",
+          "Monitoring & DCIM",
+          "Sustainable energy"
+        ],
+        "outcomes": [
+          "Facility designed to defined availability targets",
+          "Capacity headroom for growth",
+          "Real-time environmental visibility"
+        ],
+        "image": {
+          "src": "/images/photos/hero-datacenter.jpg",
+          "alt": "Data center corridor with illuminated server racks"
+        },
+        "icon": "server",
+        "theme": "Data center facility"
+      },
+      {
+        "slug": "ict-consultancy",
+        "index": "03",
+        "title": "ICT Consultancy",
+        "shortTitle": "ICT Consultancy",
+        "summary": "Independent advisory for core banking, core insurance and ERP programmes — from strategy to supervision.",
+        "description": [
+          "Large technology programmes fail in the gaps between business objectives, vendors and infrastructure. We work on the client's side of the table to close those gaps.",
+          "Our consultants support requirements definition, architecture, procurement, implementation supervision and governance for core banking, core insurance and ERP platforms, as well as national-scale ICT infrastructure initiatives."
+        ],
+        "capabilities": [
+          "Core banking",
+          "Core insurance",
+          "ERP solutions",
+          "Design & supervision",
+          "ISMS, IT governance & ITSM"
+        ],
+        "outcomes": [
+          "Vendor-neutral architecture decisions",
+          "Procurement aligned to real requirements",
+          "Governance from design to go-live"
+        ],
+        "image": {
+          "src": "/images/photos/boardroom.jpg",
+          "alt": "Modern executive boardroom with glass walls"
+        },
+        "icon": "briefcase",
+        "theme": "Enterprise advisory"
+      },
+      {
+        "slug": "cybersecurity",
+        "index": "04",
+        "title": "Cybersecurity Solutions",
+        "shortTitle": "Cybersecurity",
+        "summary": "Firewalls, endpoint protection, SIEM and compliance services that turn security into an operating discipline.",
+        "description": [
+          "Security is not a product; it is an architecture and a practice. We design layered defenses that protect the perimeter, the endpoint and the identity — and give security teams the visibility to act.",
+          "Our cybersecurity practice covers next-generation firewalls, endpoint protection, SIEM, Zero Trust frameworks, XDR, AI-powered threat hunting and SOC integration for enterprise resilience.",
+          "Information security and IT governance strategies are aligned with ISO 27001, NIST, CIS Controls and digital risk governance frameworks — combined with audit readiness and compliance automation."
+        ],
+        "capabilities": [
+          "Next-generation firewalls",
+          "Endpoint protection",
+          "SIEM & SOC integration",
+          "Zero Trust & XDR",
+          "ISO 27001 / NIST / CIS governance",
+          "Compliance services"
+        ],
+        "outcomes": [
+          "Layered defense across network, endpoint and identity",
+          "Centralized detection and response",
+          "Controls mapped to compliance obligations"
+        ],
+        "image": {
+          "src": "/images/photos/network-red.jpg",
+          "alt": "Dense red patch cabling in a network rack"
+        },
+        "icon": "shield",
+        "theme": "Security operations"
+      },
+      {
+        "slug": "cloud-services",
+        "index": "05",
+        "title": "Cloud Services",
+        "shortTitle": "Cloud",
+        "summary": "Microsoft 365, Azure, hybrid and multi-cloud, backup and disaster recovery designed for secure, continuous operation.",
+        "description": [
+          "Cloud adoption succeeds when identity, data protection and connectivity are designed together. We help organizations move to Microsoft 365 and Azure with a security-first architecture and a clear operating model.",
+          "We design SaaS, PaaS and IaaS adoption across hybrid and multi-cloud architectures and provide managed services to run them. Backup and disaster recovery are engineered as part of the same design, so business continuity is a tested capability rather than an assumption."
+        ],
+        "capabilities": [
+          "Microsoft 365",
+          "Microsoft Azure",
+          "Hybrid & multi-cloud",
+          "Managed services",
+          "Backup & disaster recovery"
+        ],
+        "outcomes": [
+          "Secure identity-centric cloud foundation",
+          "Tested recovery objectives",
+          "Modern collaboration at enterprise scale"
+        ],
+        "image": {
+          "src": "/images/photos/cloud-nodes.jpg",
+          "alt": "Abstract network of connected nodes"
+        },
+        "icon": "cloud",
+        "theme": "Cloud infrastructure"
+      },
+      {
+        "slug": "servers-storage",
+        "index": "06",
+        "title": "Enterprise Servers & Storage Systems",
+        "shortTitle": "Servers & Storage",
+        "summary": "Compute, virtualization, hyper-converged infrastructure and backup platforms sized for real workloads.",
+        "description": [
+          "The compute and storage layer must match the applications it serves — not the other way round. We size, design and implement server, storage and hyper-converged platforms around workload profiles, growth and recovery requirements.",
+          "Virtualization, backup and data protection are designed in from the start so platforms are efficient to run and simple to recover. For demanding workloads we deliver HPC clusters, NVMe storage, GPU-accelerated computing and scalable parallel file systems."
+        ],
+        "capabilities": [
+          "Compute",
+          "Virtualization",
+          "Hyper-converged infrastructure",
+          "HPC & GPU computing",
+          "NVMe & parallel storage",
+          "Backup solutions"
+        ],
+        "outcomes": [
+          "Right-sized platforms with growth headroom",
+          "Consolidated, efficient operations",
+          "Recoverable by design"
+        ],
+        "image": {
+          "src": "/images/photos/storage-disk.jpg",
+          "alt": "Open hard-disk drive platter and actuator"
+        },
+        "icon": "storage",
+        "theme": "Compute & storage"
+      },
+      {
+        "slug": "physical-security",
+        "index": "07",
+        "title": "Physical & Electronic Security Systems",
+        "shortTitle": "Physical Security",
+        "summary": "CCTV surveillance, access control and alarm systems integrated with the IP network they run on.",
+        "description": [
+          "Physical security systems are network systems. We design IP video surveillance, access control and alarm platforms as part of the enterprise infrastructure — with the bandwidth, storage and segmentation they need.",
+          "Smart capabilities — AI-powered video analytics, facial recognition, license plate recognition (LPR), biometric access control and centralized command systems — turn the estate into one that is centrally managed, reliably recorded and defensible."
+        ],
+        "capabilities": [
+          "IP video surveillance",
+          "AI video analytics & LPR",
+          "Biometric access control",
+          "Alarm & fire systems",
+          "Video walls & command centers"
+        ],
+        "outcomes": [
+          "Centrally managed security estate",
+          "Reliable retention and retrieval",
+          "Integrated with network and identity"
+        ],
+        "image": {
+          "src": "/images/photos/cctv-wall.jpg",
+          "alt": "Grid of surveillance cameras mounted on a wall"
+        },
+        "icon": "cctv",
+        "theme": "Physical security"
+      }
+    ]
+  },
+  "solutions": {
+    "steps": [
+      {
+        "index": "01",
+        "title": "Discover",
+        "statement": "Understand the mission before the technology.",
+        "detail": "We begin with the organization's objectives, operating constraints, regulatory obligations and risk posture. The output is a clear definition of what the infrastructure must achieve.",
+        "points": [
+          "Objectives & constraints",
+          "Regulatory requirements",
+          "Current-state assessment"
+        ]
+      },
+      {
+        "index": "02",
+        "title": "Architect",
+        "statement": "Design for performance, security and growth at once.",
+        "detail": "Reference architectures are tailored to performance requirements, security requirements and scalability. Every design decision is documented and vendor-neutral.",
+        "points": [
+          "Target architecture",
+          "Capacity & resilience planning",
+          "Security by design"
+        ]
+      },
+      {
+        "index": "03",
+        "title": "Integrate",
+        "statement": "Deliver as one system, not a set of products.",
+        "detail": "Our engineers implement network, data center, compute, cloud and security components as an integrated whole — tested, documented and handed over with the knowledge to run it.",
+        "points": [
+          "Implementation & commissioning",
+          "Testing & documentation",
+          "Knowledge transfer"
+        ]
+      },
+      {
+        "index": "04",
+        "title": "Secure",
+        "statement": "Protect every layer and prove it.",
+        "detail": "Controls are layered across perimeter, endpoint, identity and data, with monitoring that turns events into decisions and compliance that can be evidenced.",
+        "points": [
+          "Layered controls",
+          "Detection & response",
+          "Compliance evidence"
+        ]
+      },
+      {
+        "index": "05",
+        "title": "Operate",
+        "statement": "Keep it running with measurable reliability.",
+        "detail": "Operational readiness, monitoring and support models are defined so the organization — or our team alongside it — can operate the platform with confidence.",
+        "points": [
+          "Monitoring & visibility",
+          "Support models",
+          "Business continuity"
+        ]
+      },
+      {
+        "index": "06",
+        "title": "Scale",
+        "statement": "Grow without re-engineering.",
+        "detail": "Because capacity, segmentation and governance were designed in, expansion is incremental — new sites, new workloads and new services land on a foundation built for them.",
+        "points": [
+          "Incremental expansion",
+          "New services & sites",
+          "Continuous improvement"
+        ]
+      }
+    ],
+    "pillars": [
+      {
+        "title": "Organizational objectives",
+        "text": "Technology mapped to the outcomes leadership is accountable for."
+      },
+      {
+        "title": "Performance requirements",
+        "text": "Capacity, latency and throughput engineered to defined targets."
+      },
+      {
+        "title": "Regulatory requirements",
+        "text": "Controls aligned to the frameworks the organization must evidence."
+      },
+      {
+        "title": "Security requirements",
+        "text": "Threat models and defense in depth from the first design review."
+      },
+      {
+        "title": "Scalability",
+        "text": "Architectures that expand incrementally without redesign."
+      },
+      {
+        "title": "Business continuity",
+        "text": "Backup, recovery and resilience treated as core requirements."
+      }
+    ]
+  },
+  "industries": {
+    "items": [
+      {
+        "slug": "government",
+        "title": "Government",
+        "summary": "Secure, sovereign infrastructure for public institutions and national programmes.",
+        "description": "Public institutions need infrastructure that is secure, auditable and built to serve citizens at scale. We support government bodies with network, data center, security and consultancy services aligned to national ICT initiatives.",
+        "image": {
+          "src": "/images/photos/earth-night.jpg",
+          "alt": "Earth at night seen from orbit, city lights glowing"
+        }
+      },
+      {
+        "slug": "banking",
+        "title": "Banking & Financial Services",
+        "summary": "Always-on platforms for institutions where downtime is measured in trust.",
+        "description": "Banks depend on resilient data centers, segmented networks and layered security. We deliver infrastructure and advisory for core banking programmes, branch connectivity and security operations.",
+        "image": {
+          "src": "/images/photos/financial-district.jpg",
+          "alt": "Glass towers in a financial district"
+        }
+      },
+      {
+        "slug": "insurance",
+        "title": "Insurance",
+        "summary": "Infrastructure and advisory for core insurance platforms and secure operations.",
+        "description": "Insurers modernizing core platforms need independent advice and secure infrastructure to run them. We provide consultancy, security and data center capabilities tailored to insurance operations.",
+        "image": {
+          "src": "/images/photos/towers-glass.jpg",
+          "alt": "Low-angle view of modern glass office towers"
+        }
+      },
+      {
+        "slug": "healthcare",
+        "title": "Healthcare",
+        "summary": "Reliable networks and protected data for institutions where availability matters.",
+        "description": "Healthcare organizations run clinical and administrative systems that cannot pause. We design networks, security and compute platforms that keep them available and protected.",
+        "image": {
+          "src": "/images/photos/hospital.jpg",
+          "alt": "Hospital reception area"
+        }
+      },
+      {
+        "slug": "ngo",
+        "title": "NGOs & Development",
+        "summary": "Scalable, cost-aware technology for mission-driven organizations.",
+        "description": "Non-governmental and development organizations need dependable infrastructure, secure collaboration and cloud platforms that respect budget and compliance obligations.",
+        "image": {
+          "src": "/images/photos/cloud-waves.jpg",
+          "alt": "Abstract flowing blue surfaces"
+        }
+      },
+      {
+        "slug": "enterprise",
+        "title": "Enterprise",
+        "summary": "End-to-end infrastructure for organizations scaling their digital operations.",
+        "description": "From shipping and logistics to manufacturing and services, enterprises rely on us for network, data center, compute, cloud and security delivered as one coherent programme.",
+        "image": {
+          "src": "/images/photos/boardroom.jpg",
+          "alt": "Modern boardroom with glass walls"
+        }
+      },
+      {
+        "slug": "education",
+        "title": "Education",
+        "summary": "Campus networks and security systems for universities and institutions.",
+        "description": "Universities and institutions need campus-wide connectivity, video surveillance and secure platforms for learning and research. We design and supervise them end to end.",
+        "image": {
+          "src": "/images/photos/university.jpg",
+          "alt": "University campus building"
+        }
+      },
+      {
+        "slug": "critical-infrastructure",
+        "title": "Critical Infrastructure",
+        "summary": "Hardened, monitored systems for utilities, transport and essential services.",
+        "description": "Operators of essential services need infrastructure engineered for resilience and defended in depth. We bring data center, network, surveillance and fire-alarm expertise to critical environments such as airports.",
+        "image": {
+          "src": "/images/photos/powerlines.jpg",
+          "alt": "High-voltage transmission lines at dusk"
+        }
+      }
+    ]
+  },
+  "projects": {
+    "groups": [
+      {
+        "id": "consultancy",
+        "title": "ICT Infrastructure & Cyber Security Consultancy",
+        "description": "Independent design, supervision, testing and commissioning for data centers, networks, security, computing and governance programmes."
+      },
+      {
+        "id": "integration",
+        "title": "ICT & Cyber Security Supply and System Integration",
+        "description": "Supply, installation, configuration and training for networks, data centers, surveillance, firewalls and enterprise compute."
+      },
+      {
+        "id": "cloud",
+        "title": "Software & Cloud Services",
+        "description": "Microsoft 365, Exchange Online, Windows and cloud business applications — supplied, integrated and supported."
+      }
+    ],
+    "items": [
+      {
+        "id": "federal-supreme-court",
+        "group": "consultancy",
+        "client": "Federal Supreme Court",
+        "clientLogo": "/images/customers/federal-supreme-court.png",
+        "name": "Data Center, LAN & WAN Network Infrastructure Consultancy",
+        "sector": "Government & Judiciary",
+        "year": "2020 – 2024",
+        "location": "Ethiopia",
+        "summary": "Consultancy for the main and disaster-recovery data centers, server rooms, LAN and WAN infrastructure, network security and management, CCTV, and data center computing, storage, virtualization and backup systems.",
+        "highlights": [
+          "Main + DR data centers",
+          "Server rooms at 22 sites",
+          "Structured cabling for 24 sites",
+          "769 IP cameras across 24 sites"
+        ],
+        "technologies": [
+          "Data center facility",
+          "LAN / WAN",
+          "Network security",
+          "CCTV",
+          "Compute & storage",
+          "Backup & replication"
+        ],
+        "featured": true,
+        "image": {
+          "src": "/images/photos/hero-datacenter.jpg",
+          "alt": "Data center corridor with illuminated server racks"
+        }
+      },
+      {
+        "id": "esl-dc-relocation",
+        "group": "consultancy",
+        "client": "Ethiopian Shipping and Logistics Services Enterprise",
+        "clientLogo": "/images/customers/esl.png",
+        "name": "ESL Data Center Relocation & Migration",
+        "sector": "State Enterprise & Logistics",
+        "year": "2026",
+        "location": "Ethiopia",
+        "summary": "Staged server room establishment, rebuilding and relocation of the data center facility, and migration of the existing data center network, security and HCI-based computing and storage.",
+        "highlights": [
+          "Staged server room",
+          "Facility rebuild & relocation",
+          "HCI platform migration"
+        ],
+        "technologies": [
+          "Data center facility",
+          "Network & security",
+          "HCI compute & storage"
+        ],
+        "featured": true,
+        "image": {
+          "src": "/images/photos/network-switch.jpg",
+          "alt": "Enterprise network switch with patch cables"
+        }
+      },
+      {
+        "id": "awash-it-governance",
+        "group": "consultancy",
+        "client": "Awash Bank",
+        "clientLogo": "/images/customers/awash-bank.png",
+        "name": "IT Governance & Security Management Project Management",
+        "sector": "Banking & Financial Services",
+        "year": "2021 – 2022",
+        "location": "Ethiopia",
+        "summary": "Project management for the bank's IT governance and security management programme, alongside enterprise network, data center network and SD-WAN architectural design.",
+        "highlights": [
+          "COBIT IT governance",
+          "ISO 20000 & ITIL 4 ITSM",
+          "ISO 27001 security management"
+        ],
+        "technologies": [
+          "IT governance",
+          "ITSM",
+          "ISMS",
+          "SD-WAN architecture"
+        ],
+        "featured": true,
+        "image": {
+          "src": "/images/photos/rack-mono.jpg",
+          "alt": "Server rack with cabling, monochrome"
+        }
+      },
+      {
+        "id": "pehaa-national-data-repository",
+        "group": "consultancy",
+        "client": "Public Enterprises Holding and Administration Agency (PEHAA)",
+        "clientLogo": "/images/customers/pehaa.png",
+        "name": "National Data Repository Consultancy",
+        "sector": "Government",
+        "year": "2021 – 2023",
+        "location": "Addis Ababa, Ethiopia",
+        "summary": "Consultancy for the National Data Repository application and infrastructure — data center facility, network and security including CCTV for the HQ building, computing and storage, and digital culture and training.",
+        "highlights": [
+          "National data repository",
+          "HQ network, security & CCTV",
+          "Digital culture & training"
+        ],
+        "technologies": [
+          "Data center facility",
+          "Network & security",
+          "Compute & storage",
+          "Training"
+        ],
+        "featured": false,
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "id": "esl-data-center",
+        "group": "consultancy",
+        "client": "Ethiopian Shipping and Logistics Services Enterprise",
+        "clientLogo": "/images/customers/esl.png",
+        "name": "ESL Data Center Project",
+        "sector": "State Enterprise & Logistics",
+        "year": "2018 – 2023",
+        "location": "Addis Ababa, Ethiopia",
+        "summary": "Delivered as part of a consortium: data center systems design and consultancy covering the facility, network and security, HCI-based computing and storage, building cabling and CCTV.",
+        "highlights": [
+          "3B+G+19 building cabling design",
+          "HCI compute & storage",
+          "CCTV systems"
+        ],
+        "technologies": [
+          "Data center facility",
+          "Network & security",
+          "HCI",
+          "Structured cabling",
+          "CCTV"
+        ],
+        "featured": false,
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "id": "ofag-testing-commissioning",
+        "group": "consultancy",
+        "client": "Office of the Federal Auditor General (OFAG)",
+        "clientLogo": "/images/customers/ofag.png",
+        "name": "Data Center Testing & Commissioning",
+        "sector": "Government",
+        "year": "2018 – 2019",
+        "location": "Addis Ababa, Ethiopia",
+        "summary": "Testing and commissioning of the data center facility, data center network and security, computing and storage and WLAN network under a DFID-sponsored programme.",
+        "highlights": [
+          "DFID-sponsored programme",
+          "Testing & commissioning"
+        ],
+        "technologies": [
+          "Data center facility",
+          "Network & security",
+          "Compute & storage",
+          "WLAN"
+        ],
+        "featured": false,
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "id": "coopbank-oromia",
+        "group": "consultancy",
+        "client": "Cooperative Bank of Oromia",
+        "clientLogo": "/images/customers/coopbank-oromia.png",
+        "name": "Data Center Consultancy",
+        "sector": "Banking & Financial Services",
+        "year": "2019",
+        "location": "Bole, Addis Ababa, Ethiopia",
+        "summary": "Data center consultancy for the bank's transitional building — decoration, power, HVAC, modular aisle containment, cabling, access control and surveillance, fire detection and suppression and DCIM — plus migration to the new data center.",
+        "highlights": [
+          "Modular aisle containment",
+          "ATS, UPS & generator power",
+          "Data center migration"
+        ],
+        "technologies": [
+          "Power systems",
+          "HVAC",
+          "Fire suppression",
+          "Access control & CCTV",
+          "DCIM"
+        ],
+        "featured": false,
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "id": "awash-network-security-design",
+        "group": "consultancy",
+        "client": "Awash Bank",
+        "clientLogo": "/images/customers/awash-bank.png",
+        "name": "End-to-End Enterprise Network & Security Design",
+        "sector": "Banking & Financial Services",
+        "year": "2018",
+        "location": "Ethiopia",
+        "summary": "Data center facility audit and redesign, data center and building network design, computing and storage redesign, security system audit and redesign, and structured cabling redesign.",
+        "highlights": [
+          "Facility audit & redesign",
+          "Security audit & redesign",
+          "Data center network design"
+        ],
+        "technologies": [
+          "Data center facility",
+          "Network design",
+          "Security",
+          "Compute & storage"
+        ],
+        "featured": false,
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "id": "decsi-data-center",
+        "group": "consultancy",
+        "client": "Dedebit Credit and Saving Institution (DECSI)",
+        "clientLogo": "/images/customers/decsi.png",
+        "name": "DECSI Data Center Project",
+        "sector": "Microfinance",
+        "year": "2018",
+        "location": "Mekelle, Ethiopia",
+        "summary": "Delivered as part of a consortium: design and consultancy for the data center facility, network and security, computing and storage, information security, governance and training, and core banking testing and conformance.",
+        "highlights": [
+          "Core banking testing & conformance",
+          "Information security & governance"
+        ],
+        "technologies": [
+          "Data center facility",
+          "Network & security",
+          "Compute & storage",
+          "IS governance"
+        ],
+        "featured": false,
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "id": "interdist-sales-office",
+        "group": "consultancy",
+        "client": "Interdist Alliances Ltd (UK)",
+        "clientLogo": "/images/customers/interdist.png",
+        "name": "Ethiopia Sales Management Office",
+        "sector": "Technology Distribution",
+        "year": "2018 – 2019",
+        "location": "Ethiopia",
+        "summary": "Independent consultant managing the Ethiopian sales office for the supply and distribution of enterprise vendor products.",
+        "highlights": [
+          "Cisco",
+          "Oracle",
+          "NetApp",
+          "IBM"
+        ],
+        "technologies": [
+          "Channel management",
+          "Supply & distribution"
+        ],
+        "featured": false,
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "id": "vora-addis-hotel",
+        "group": "integration",
+        "client": "Vora Addis Hotel",
+        "clientLogo": "/images/customers/vora-addis-hotel.png",
+        "name": "Hotel Network, CCTV, Telephone, Access Control & IPTV Systems",
+        "sector": "Hospitality",
+        "year": "2026",
+        "location": "Addis Ababa, Ethiopia",
+        "summary": "Supply, installation, configuration and training for the hotel's structured cabling, server room power, LAN switching, wireless network, IP CCTV, IP telephony, IPTV, door-lock access control and elevator control.",
+        "highlights": [
+          "UTP & fiber cabling",
+          "IP telephony & IPTV",
+          "Door-lock & elevator control"
+        ],
+        "technologies": [
+          "LAN / WLAN",
+          "IP CCTV",
+          "IP telephony",
+          "IPTV",
+          "Access control"
+        ],
+        "featured": true,
+        "image": {
+          "src": "/images/photos/network-patch.jpg",
+          "alt": "Patch panel with structured network cabling"
+        }
+      },
+      {
+        "id": "jimma-airport",
+        "group": "integration",
+        "client": "Ethiopian Airlines",
+        "clientLogo": "/images/customers/ethiopian-airlines.png",
+        "name": "Jimma Airport Network, IP CCTV & Fire Alarm Systems",
+        "sector": "Aviation",
+        "year": "2026",
+        "location": "Jimma, Ethiopia",
+        "summary": "Supply, installation, configuration and training for network infrastructure, fiber splicing and testing, server room power, fire alarm systems and IP video surveillance with a monitoring video wall.",
+        "highlights": [
+          "32 IP cameras",
+          "32-channel NVR",
+          "2 × 55″ video wall"
+        ],
+        "technologies": [
+          "Structured cabling",
+          "Network switching",
+          "Fire alarm",
+          "IP CCTV"
+        ],
+        "featured": false,
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "id": "lideta-modular-data-center",
+        "group": "integration",
+        "client": "City Government of Addis Ababa — Lideta Sub City",
+        "clientLogo": "/images/customers/addis-ababa-city.png",
+        "name": "HQ Modular Data Center & CCTV Systems",
+        "sector": "Government",
+        "year": "2025",
+        "location": "Addis Ababa, Ethiopia",
+        "summary": "Huawei FusionModule800 modular data center with power distribution, access control and fire suppression, plus a HikCentral Pro IP video surveillance system with SAN storage and video wall — including civil works and training.",
+        "highlights": [
+          "6-rack modular data center",
+          "2 × 20 kVA UPS, 3 in-row cooling",
+          "84 IP cameras, 128-channel NVR",
+          "96 TB hybrid SAN"
+        ],
+        "technologies": [
+          "Huawei FusionModule800",
+          "Fire suppression",
+          "HikCentral Pro",
+          "Video wall"
+        ],
+        "featured": true,
+        "image": {
+          "src": "/images/photos/cctv-wall.jpg",
+          "alt": "Surveillance cameras arranged on a wall"
+        }
+      },
+      {
+        "id": "decsi-servers-storage",
+        "group": "integration",
+        "client": "Dedebit Credit and Saving Institution (DECSI)",
+        "clientLogo": "/images/customers/decsi.png",
+        "name": "Data Center Servers, Storage & Virtualization",
+        "sector": "Microfinance",
+        "year": "2025",
+        "location": "Mekelle, Ethiopia",
+        "summary": "Installation, configuration, testing, commissioning and training for HPE servers and storage, disk and tape backup, VMware virtualization, Veeam, Red Hat and Microsoft platforms, F5 web application firewalls and Microsoft 365.",
+        "highlights": [
+          "6 × HPE DL360 Gen11 servers",
+          "HPE Alletra MP storage",
+          "60 virtual machines",
+          "Microsoft 365 for 300 users"
+        ],
+        "technologies": [
+          "HPE",
+          "VMware",
+          "Veeam",
+          "Red Hat Enterprise Linux",
+          "F5 WAF",
+          "Microsoft"
+        ],
+        "featured": false,
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "id": "fana-sacco",
+        "group": "integration",
+        "client": "Fana Youth Saving and Credit Cooperative",
+        "clientLogo": "",
+        "name": "Data Center & Network Systems",
+        "sector": "Microfinance",
+        "year": "2025",
+        "location": "Mekelle, Ethiopia",
+        "summary": "Supply, installation, configuration and training for a micro data center, core and access networking, servers with KVM virtualization and firewall systems.",
+        "highlights": [
+          "Vertiv micro data center, 3 racks",
+          "In-row cooling",
+          "Cisco core & access switching"
+        ],
+        "technologies": [
+          "Vertiv",
+          "Cisco",
+          "Lenovo",
+          "KVM",
+          "Firewall"
+        ],
+        "featured": false,
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "id": "united-beverages-fortigate",
+        "group": "integration",
+        "client": "United Beverages S.C.",
+        "clientLogo": "",
+        "name": "FortiGate Firewalls",
+        "sector": "Manufacturing",
+        "year": "2025",
+        "location": "Addis Ababa, Ethiopia",
+        "summary": "Supply of next-generation FortiGate firewalls.",
+        "highlights": [
+          "1 × FortiGate 91G",
+          "2 × FortiGate 121G"
+        ],
+        "technologies": [
+          "Fortinet",
+          "Next-generation firewall"
+        ],
+        "featured": false,
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "id": "ozel-furniture",
+        "group": "integration",
+        "client": "Ozel Furniture Factory",
+        "clientLogo": "",
+        "name": "Factory CCTV System",
+        "sector": "Manufacturing",
+        "year": "2024",
+        "location": "Sheger City, Oromia, Ethiopia",
+        "summary": "Design, implementation and project management of an IP video surveillance system for a factory of over 1,000 m², with training and one year of support.",
+        "highlights": [
+          "32 IP cameras",
+          "64-channel NVR",
+          "1-year support"
+        ],
+        "technologies": [
+          "IP video surveillance",
+          "Design",
+          "Training"
+        ],
+        "featured": false,
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "id": "aa-culture-tourism",
+        "group": "integration",
+        "client": "Addis Ababa Culture, Art and Tourism Bureau",
+        "clientLogo": "/images/customers/aa-culture-tourism.png",
+        "name": "HQ Network & Security Project",
+        "sector": "Government",
+        "year": "2023 – 2024",
+        "location": "Addis Ababa, Ethiopia",
+        "summary": "Design, supervision and project management for the headquarters network and security, servers, IP video surveillance, video wall, digital signage and name display systems.",
+        "highlights": [
+          "3,000-node structured cabling",
+          "65 access, 2 distribution & 1 core switch",
+          "134 IP cameras",
+          "2 × 3 × 3 video wall"
+        ],
+        "technologies": [
+          "Enterprise network",
+          "Firewall",
+          "Dell PowerEdge",
+          "CCTV",
+          "Digital signage"
+        ],
+        "featured": true,
+        "image": {
+          "src": "/images/photos/network-red.jpg",
+          "alt": "Dense red patch cabling in a network rack"
+        }
+      },
+      {
+        "id": "debre-tabor-university",
+        "group": "integration",
+        "client": "Debre Tabor University",
+        "clientLogo": "/images/customers/debre-tabor-university.png",
+        "name": "Campus CCTV Design & Implementation",
+        "sector": "Education",
+        "year": "2022 – 2024",
+        "location": "Debre Tabor, Ethiopia",
+        "summary": "Design, supervision and project management of the main campus IP video surveillance system.",
+        "highlights": [
+          "80 IP cameras",
+          "Main campus coverage"
+        ],
+        "technologies": [
+          "IP video surveillance",
+          "Design",
+          "Supervision"
+        ],
+        "featured": true,
+        "image": {
+          "src": "/images/photos/university.jpg",
+          "alt": "University campus building"
+        }
+      },
+      {
+        "id": "united-beverages-fortigate-renewal",
+        "group": "integration",
+        "client": "United Beverages S.C.",
+        "clientLogo": "",
+        "name": "FortiGate License Renewal",
+        "sector": "Manufacturing",
+        "year": "2022",
+        "location": "Addis Ababa, Ethiopia",
+        "summary": "License renewal supply for the company's FortiGate firewalls.",
+        "highlights": [
+          "3 × FortiGate 100E"
+        ],
+        "technologies": [
+          "Fortinet",
+          "Licensing"
+        ],
+        "featured": false,
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "id": "lion-insurance",
+        "group": "integration",
+        "client": "Lion Insurance Company",
+        "clientLogo": "/images/customers/lion-insurance.png",
+        "name": "Network Firewall",
+        "sector": "Insurance",
+        "year": "2021",
+        "location": "Addis Ababa, Ethiopia",
+        "summary": "Supply, installation, configuration and training for a FortiGate network firewall.",
+        "highlights": [
+          "FortiGate firewall",
+          "Configuration & training"
+        ],
+        "technologies": [
+          "Fortinet",
+          "Next-generation firewall",
+          "Training"
+        ],
+        "featured": false,
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "id": "dimtsi-weyane",
+        "group": "integration",
+        "client": "Dimtsi Weyane Tigray PLC",
+        "clientLogo": "/images/customers/dimtsi-weyane.png",
+        "name": "Network Firewall",
+        "sector": "Media",
+        "year": "2020",
+        "location": "Mekelle, Ethiopia",
+        "summary": "Supply, installation, configuration and training for a FortiGate network firewall.",
+        "highlights": [
+          "FortiGate firewall",
+          "Configuration & training"
+        ],
+        "technologies": [
+          "Fortinet",
+          "Next-generation firewall",
+          "Training"
+        ],
+        "featured": false,
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "id": "aa-education-windows-server",
+        "group": "integration",
+        "client": "Addis Ababa City Government Education and Training Quality Professional Assessment and Assurance Authority",
+        "clientLogo": "",
+        "name": "Windows Server 2019 Supply & Installation",
+        "sector": "Government",
+        "year": "2020",
+        "location": "Addis Ababa, Ethiopia",
+        "summary": "Supply, installation, configuration and training for Microsoft Windows Server 2019 across the authority's sites.",
+        "highlights": [
+          "9 sites"
+        ],
+        "technologies": [
+          "Windows Server 2019",
+          "Training"
+        ],
+        "featured": false,
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "id": "aa-education-routers",
+        "group": "integration",
+        "client": "Addis Ababa City Government Education and Training Quality Professional Assessment and Assurance Authority",
+        "clientLogo": "",
+        "name": "Cisco Routers Supply & Training",
+        "sector": "Government",
+        "year": "2019 – 2020",
+        "location": "Addis Ababa, Ethiopia",
+        "summary": "Supply of Cisco routers with training on installation and configuration.",
+        "highlights": [
+          "6 Cisco routers"
+        ],
+        "technologies": [
+          "Cisco",
+          "Routing",
+          "Training"
+        ],
+        "featured": false,
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "id": "allenatech-servers",
+        "group": "integration",
+        "client": "Allenatech Electronic Technologies S.C.",
+        "clientLogo": "",
+        "name": "Dell EMC Data Center Servers",
+        "sector": "Technology",
+        "year": "2019",
+        "location": "Mekelle, Ethiopia",
+        "summary": "Supply, installation and training for Dell EMC PowerEdge data center servers.",
+        "highlights": [
+          "4 × Dell EMC PowerEdge R740xd"
+        ],
+        "technologies": [
+          "Dell EMC",
+          "Servers"
+        ],
+        "featured": false,
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "id": "mota-engil",
+        "group": "cloud",
+        "client": "Mota-Engil",
+        "clientLogo": "/images/customers/mota-engil.png",
+        "name": "Microsoft Windows 11 Pro",
+        "sector": "Construction",
+        "year": "2026",
+        "location": "Ethiopia",
+        "summary": "Supply of Microsoft Windows 11 Pro, completed within five days.",
+        "highlights": [
+          "31 users"
+        ],
+        "technologies": [
+          "Windows 11 Pro"
+        ],
+        "featured": false,
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "id": "yunabek",
+        "group": "cloud",
+        "client": "Yunabek Trading PLC",
+        "clientLogo": "",
+        "name": "Microsoft Exchange Online Email System",
+        "sector": "Trade",
+        "year": "2025",
+        "location": "Ethiopia",
+        "summary": "Supply and integration of Exchange Online Plan 1 — domain integration, user provisioning, policy setting, testing and commissioning.",
+        "highlights": [
+          "40 users",
+          "Delivered in 5 days"
+        ],
+        "technologies": [
+          "Exchange Online",
+          "Microsoft 365"
+        ],
+        "featured": false,
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "id": "papda",
+        "group": "cloud",
+        "client": "Partnership for Pastoralists Development Association (PAPDA)",
+        "clientLogo": "/images/customers/papda.png",
+        "name": "Microsoft 365 Business Premium & Power BI",
+        "sector": "NGO & Development",
+        "year": "2025",
+        "location": "Addis Ababa, Ethiopia",
+        "summary": "Supply, installation, configuration and training for Microsoft 365 and Power BI (NGO editions).",
+        "highlights": [
+          "18 × Microsoft 365 Business Premium",
+          "Power BI Premium"
+        ],
+        "technologies": [
+          "Microsoft 365",
+          "Power BI"
+        ],
+        "featured": false,
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "id": "eda",
+        "group": "cloud",
+        "client": "Emmanuel Development Association (EDA)",
+        "clientLogo": "/images/customers/eda.png",
+        "name": "Microsoft 365 Business Standard",
+        "sector": "NGO & Development",
+        "year": "2025",
+        "location": "Addis Ababa, Ethiopia",
+        "summary": "Supply, installation, configuration and training for Microsoft 365 (non-profit edition).",
+        "highlights": [
+          "10 users"
+        ],
+        "technologies": [
+          "Microsoft 365"
+        ],
+        "featured": false,
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "id": "development-for-all",
+        "group": "cloud",
+        "client": "Development for All (DfA)",
+        "clientLogo": "/images/customers/development-for-all.png",
+        "name": "Microsoft 365 & Cloud QuickBooks",
+        "sector": "NGO & Development",
+        "year": "2025",
+        "location": "Addis Ababa, Ethiopia",
+        "summary": "Supply, installation, configuration and training for Microsoft 365 Business Standard (NGO edition), plus cloud-based QuickBooks.",
+        "highlights": [
+          "20 × Microsoft 365 Business Standard",
+          "Cloud QuickBooks"
+        ],
+        "technologies": [
+          "Microsoft 365",
+          "QuickBooks Online"
+        ],
+        "featured": false,
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "id": "united-beverages-m365",
+        "group": "cloud",
+        "client": "United Beverages S.C.",
+        "clientLogo": "",
+        "name": "Microsoft 365, Power BI Pro & Visio",
+        "sector": "Manufacturing",
+        "year": "2024 – 2026",
+        "location": "Addis Ababa, Ethiopia",
+        "summary": "Supply of Microsoft 365 Business Standard, Power BI Pro and Visio Plan 2, renewed for 2025–2026.",
+        "highlights": [
+          "166 × Microsoft 365",
+          "13 × Power BI Pro",
+          "Visio Plan 2"
+        ],
+        "technologies": [
+          "Microsoft 365",
+          "Power BI",
+          "Visio"
+        ],
+        "featured": false,
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "id": "rammis-bank",
+        "group": "cloud",
+        "client": "Rammis Bank",
+        "clientLogo": "/images/customers/rammis-bank.png",
+        "name": "Microsoft 365 Project",
+        "sector": "Banking & Financial Services",
+        "year": "2023",
+        "location": "Addis Ababa, Ethiopia",
+        "summary": "Supply, installation, configuration and training for Microsoft 365 — email, Teams, OneDrive and Office applications. Delivered twice.",
+        "highlights": [
+          "2 engagements"
+        ],
+        "technologies": [
+          "Microsoft 365",
+          "Exchange Online",
+          "Teams",
+          "OneDrive"
+        ],
+        "featured": false,
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "id": "giz-opa",
+        "group": "cloud",
+        "client": "GIZ — Oromia Pastoralist Association",
+        "clientLogo": "/images/customers/giz.png",
+        "name": "Microsoft 365 Business Standard",
+        "sector": "NGO & Development",
+        "year": "2022",
+        "location": "Addis Ababa, Ethiopia",
+        "summary": "GIZ-sponsored supply, installation, configuration and training for Microsoft 365 — email, Teams, OneDrive and Office applications.",
+        "highlights": [
+          "12 users"
+        ],
+        "technologies": [
+          "Microsoft 365"
+        ],
+        "featured": false,
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "id": "aura-trading",
+        "group": "cloud",
+        "client": "Aura Trading PLC",
+        "clientLogo": "",
+        "name": "Microsoft 365 Business Standard",
+        "sector": "Trade",
+        "year": "2022",
+        "location": "Addis Ababa, Ethiopia",
+        "summary": "Supply, installation, configuration and training for Microsoft 365 — email, Teams, OneDrive and Office applications. Delivered twice.",
+        "highlights": [
+          "2 engagements"
+        ],
+        "technologies": [
+          "Microsoft 365"
+        ],
+        "featured": false,
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "id": "rrs",
+        "group": "cloud",
+        "client": "Refugees and Returnees Service (RRS)",
+        "clientLogo": "/images/customers/rrs.png",
+        "name": "Microsoft 365 Implementation",
+        "sector": "Government",
+        "year": "2022",
+        "location": "Addis Ababa, Ethiopia",
+        "summary": "Supply, implementation and training for Microsoft 365 — email, Teams, OneDrive and Office applications. Delivered in three engagements.",
+        "highlights": [
+          "500 users",
+          "3 engagements"
+        ],
+        "technologies": [
+          "Microsoft 365",
+          "Exchange Online",
+          "Teams"
+        ],
+        "featured": false,
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "id": "apcfc",
+        "group": "cloud",
+        "client": "APCfC",
+        "clientLogo": "",
+        "name": "Microsoft 365 Supply & Implementation",
+        "sector": "NGO & Development",
+        "year": "",
+        "location": "Ethiopia",
+        "summary": "Supply, installation, configuration and training for Microsoft 365.",
+        "highlights": [],
+        "technologies": [
+          "Microsoft 365"
+        ],
+        "featured": false,
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      }
+    ]
+  },
+  "customers": {
+    "items": [
+      {
+        "id": "federal-supreme-court",
+        "name": "Federal Supreme Court",
+        "shortName": "",
+        "amharicName": "ፌደራል ጠቅላይ ፍርድ ቤት",
+        "logo": "/images/customers/federal-supreme-court.png",
+        "category": "Government & Judiciary",
+        "description": "Main and DR data centers, LAN and WAN infrastructure, CCTV and computing and storage consultancy across 24 sites.",
+        "url": ""
+      },
+      {
+        "id": "awash-bank",
+        "name": "Awash Bank",
+        "shortName": "",
+        "amharicName": "አዋሽ ባንክ",
+        "logo": "/images/customers/awash-bank.png",
+        "category": "Banking & Financial Services",
+        "description": "IT governance and security management, enterprise network and security design, and data center, computing and storage consultancy.",
+        "url": "https://awashbank.com"
+      },
+      {
+        "id": "esl",
+        "name": "Ethiopian Shipping and Logistics Services Enterprise",
+        "shortName": "",
+        "amharicName": "የኢትዮጵያ ባህር ትራንስፖርትና ሎጂስቲክስ",
+        "logo": "/images/customers/esl.png",
+        "category": "State Enterprise & Logistics",
+        "description": "Data center, network and security, and HCI computing and storage consultancy — including the data center relocation and migration.",
+        "url": "https://esl.et"
+      },
+      {
+        "id": "ethiopian-airlines",
+        "name": "Ethiopian Airlines",
+        "shortName": "",
+        "amharicName": "",
+        "logo": "/images/customers/ethiopian-airlines.png",
+        "category": "Aviation",
+        "description": "Jimma Airport network infrastructure, IP CCTV and fire alarm systems.",
+        "url": "https://www.ethiopianairlines.com"
+      },
+      {
+        "id": "aa-culture-tourism",
+        "name": "Addis Ababa Culture, Art and Tourism Bureau",
+        "shortName": "",
+        "amharicName": "ባህል፣ ሥነ ጥበብ እና ቱሪዝም ቢሮ",
+        "logo": "/images/customers/aa-culture-tourism.png",
+        "category": "Government & Public Administration",
+        "description": "HQ network and security design and implementation — network and security, CCTV and digital signage systems.",
+        "url": "https://discoveraddis.gov.et"
+      },
+      {
+        "id": "debre-tabor-university",
+        "name": "Debre Tabor University",
+        "shortName": "",
+        "amharicName": "ደብረ ታቦር ዩኒቨርሲቲ",
+        "logo": "/images/customers/debre-tabor-university.png",
+        "category": "Higher Education & Research",
+        "description": "Main campus IP video surveillance design, supervision and project management.",
+        "url": "https://www.dtu.edu.et"
+      },
+      {
+        "id": "addis-ababa-city",
+        "name": "City Government of Addis Ababa — Lideta Sub City",
+        "shortName": "",
+        "amharicName": "",
+        "logo": "/images/customers/addis-ababa-city.png",
+        "category": "Government & Public Administration",
+        "description": "Huawei modular data center facility and IP CCTV systems for the sub city HQ building.",
+        "url": ""
+      },
+      {
+        "id": "pehaa",
+        "name": "Public Enterprises Holding and Administration Agency",
+        "shortName": "",
+        "amharicName": "",
+        "logo": "/images/customers/pehaa.png",
+        "category": "Government",
+        "description": "National Data Repository consultancy — application, infrastructure, data center and training.",
+        "url": ""
+      },
+      {
+        "id": "coopbank-oromia",
+        "name": "Cooperative Bank of Oromia",
+        "shortName": "",
+        "amharicName": "",
+        "logo": "/images/customers/coopbank-oromia.png",
+        "category": "Banking & Financial Services",
+        "description": "Data center facility consultancy and migration to the new data center.",
+        "url": "https://coopbankoromia.com.et"
+      },
+      {
+        "id": "decsi",
+        "name": "Dedebit Credit and Saving Institution",
+        "shortName": "",
+        "amharicName": "",
+        "logo": "/images/customers/decsi.png",
+        "category": "Microfinance",
+        "description": "Data center consultancy, plus HPE servers, storage, VMware virtualization and Microsoft 365 integration.",
+        "url": ""
+      },
+      {
+        "id": "ofag",
+        "name": "Office of the Federal Auditor General",
+        "shortName": "",
+        "amharicName": "",
+        "logo": "/images/customers/ofag.png",
+        "category": "Government",
+        "description": "Testing and commissioning of the data center facility, network and security, computing and storage and WLAN.",
+        "url": ""
+      },
+      {
+        "id": "lion-insurance",
+        "name": "Lion Insurance Company",
+        "shortName": "",
+        "amharicName": "አንበሳ ኢንሹራንስ ኩባንያ",
+        "logo": "/images/customers/lion-insurance.png",
+        "category": "Insurance & Financial Protection",
+        "description": "FortiGate firewall supply, installation, configuration and training.",
+        "url": "https://www.anbessainsurance.com"
+      },
+      {
+        "id": "rammis-bank",
+        "name": "Rammis Bank",
+        "shortName": "",
+        "amharicName": "",
+        "logo": "/images/customers/rammis-bank.png",
+        "category": "Banking & Financial Services",
+        "description": "Supply, installation, configuration and training for Microsoft 365 — email, Teams, OneDrive and Office.",
+        "url": "https://www.rammisbank.com"
+      },
+      {
+        "id": "vora-addis-hotel",
+        "name": "Vora Addis Hotel",
+        "shortName": "",
+        "amharicName": "",
+        "logo": "/images/customers/vora-addis-hotel.png",
+        "category": "Hospitality",
+        "description": "LAN, Wi-Fi, IP CCTV, IP telephony, IPTV and door-lock and elevator access control systems.",
+        "url": "https://voraaddishotel.com"
+      },
+      {
+        "id": "rrs",
+        "name": "Refugees and Returnees Service",
+        "shortName": "",
+        "amharicName": "",
+        "logo": "/images/customers/rrs.png",
+        "category": "Government",
+        "description": "Microsoft 365 supply, implementation and training for 500 users.",
+        "url": "https://rrs.et"
+      },
+      {
+        "id": "mota-engil",
+        "name": "Mota-Engil",
+        "shortName": "",
+        "amharicName": "",
+        "logo": "/images/customers/mota-engil.png",
+        "category": "Construction",
+        "description": "Microsoft Windows 11 Pro supply.",
+        "url": "https://www.mota-engil.com"
+      },
+      {
+        "id": "giz",
+        "name": "GIZ — Oromia Pastoralist Association",
+        "shortName": "",
+        "amharicName": "",
+        "logo": "/images/customers/giz.png",
+        "category": "International Development",
+        "description": "GIZ-sponsored Microsoft 365 supply, installation, configuration and training.",
+        "url": "https://www.giz.de/en"
+      },
+      {
+        "id": "dimtsi-weyane",
+        "name": "Dimtsi Weyane Tigray",
+        "shortName": "",
+        "amharicName": "",
+        "logo": "/images/customers/dimtsi-weyane.png",
+        "category": "Media",
+        "description": "FortiGate network firewall supply, installation, configuration and training.",
+        "url": ""
+      },
+      {
+        "id": "eda",
+        "name": "Emmanuel Development Association",
+        "shortName": "",
+        "amharicName": "",
+        "logo": "/images/customers/eda.png",
+        "category": "NGO & Development",
+        "description": "Microsoft 365 Business Standard supply, configuration and training.",
+        "url": "https://edaethiopia.org"
+      },
+      {
+        "id": "papda",
+        "name": "Partnership for Pastoralists Development Association",
+        "shortName": "",
+        "amharicName": "",
+        "logo": "/images/customers/papda.png",
+        "category": "NGO & Development",
+        "description": "Microsoft 365 Business Premium and Power BI supply, configuration and training.",
+        "url": "https://papdaa.org"
+      },
+      {
+        "id": "development-for-all",
+        "name": "Development for All",
+        "shortName": "",
+        "amharicName": "",
+        "logo": "/images/customers/development-for-all.png",
+        "category": "NGO & Development",
+        "description": "Microsoft 365 Business Standard and cloud-based QuickBooks.",
+        "url": ""
+      },
+      {
+        "id": "interdist",
+        "name": "Interdist Alliances",
+        "shortName": "",
+        "amharicName": "",
+        "logo": "/images/customers/interdist.png",
+        "category": "Technology Distribution",
+        "description": "Ethiopia sales office management for Cisco, Oracle, NetApp and IBM product distribution.",
+        "url": ""
+      },
+      {
+        "id": "united-beverages",
+        "name": "United Beverages S.C.",
+        "shortName": "United Beverages",
+        "amharicName": "",
+        "logo": "",
+        "category": "Manufacturing",
+        "description": "FortiGate firewalls and license renewal, Microsoft 365, Power BI Pro and Visio.",
+        "url": ""
+      },
+      {
+        "id": "fana-sacco",
+        "name": "Fana Youth Saving and Credit Cooperative",
+        "shortName": "Fana SACCO",
+        "amharicName": "",
+        "logo": "",
+        "category": "Microfinance",
+        "description": "Micro data center, Cisco networking, Lenovo servers with KVM virtualization and firewalls.",
+        "url": ""
+      }
+    ]
+  },
+  "partners": {
+    "items": [
+      {
+        "name": "Cisco",
+        "logo": "/images/partners/cisco.png",
+        "category": "Enterprise networking, SD-Access & security",
+        "url": "https://www.cisco.com"
+      },
+      {
+        "name": "Huawei",
+        "logo": "/images/partners/huawei.png",
+        "category": "Campus & carrier-grade networking, modular data centers",
+        "url": "https://www.huawei.com"
+      },
+      {
+        "name": "Aruba Networks (HPE)",
+        "logo": "/images/partners/aruba.png",
+        "category": "Intelligent edge, Wi-Fi 6/6E",
+        "url": "https://www.hpe.com/us/en/aruba-networking.html"
+      },
+      {
+        "name": "Ruijie Networks",
+        "logo": "/images/partners/ruijie.png",
+        "category": "Agile access networking",
+        "url": "https://www.ruijienetworks.com"
+      },
+      {
+        "name": "Arista",
+        "logo": "/images/partners/arista.png",
+        "category": "Data center networking",
+        "url": "https://www.arista.com"
+      },
+      {
+        "name": "Attom Technologies",
+        "logo": "/images/partners/attom.png",
+        "category": "Power & physical infrastructure",
+        "url": "https://attom.tech"
+      },
+      {
+        "name": "Siemon",
+        "logo": "/images/partners/siemon.png",
+        "category": "Structured cabling",
+        "url": "https://www.siemon.com"
+      },
+      {
+        "name": "Fortinet",
+        "logo": "/images/partners/fortinet.png",
+        "category": "Network security",
+        "url": "https://www.fortinet.com"
+      },
+      {
+        "name": "Check Point",
+        "logo": "/images/partners/checkpoint.png",
+        "category": "Threat prevention",
+        "url": "https://www.checkpoint.com"
+      },
+      {
+        "name": "Sophos",
+        "logo": "/images/partners/sophos.png",
+        "category": "Threat prevention",
+        "url": "https://www.sophos.com"
+      },
+      {
+        "name": "Kaspersky",
+        "logo": "/images/partners/kaspersky.png",
+        "category": "Threat prevention",
+        "url": "https://www.kaspersky.com"
+      },
+      {
+        "name": "Delina Technologies",
+        "logo": "",
+        "category": "Regional cyber security solutions",
+        "url": ""
+      },
+      {
+        "name": "Cyber Observer",
+        "logo": "/images/partners/cyberobserver.png",
+        "category": "Security posture",
+        "url": "https://www.cyberobserver.com"
+      },
+      {
+        "name": "Dell Technologies",
+        "logo": "/images/partners/dell.png",
+        "category": "Enterprise hardware",
+        "url": "https://www.dell.com"
+      },
+      {
+        "name": "HPE",
+        "logo": "/images/partners/hpe.png",
+        "category": "Enterprise hardware",
+        "url": "https://www.hpe.com"
+      },
+      {
+        "name": "Lenovo",
+        "logo": "/images/partners/lenovo.png",
+        "category": "Enterprise hardware",
+        "url": "https://www.lenovo.com"
+      },
+      {
+        "name": "IBM",
+        "logo": "/images/partners/ibm.png",
+        "category": "Enterprise hardware & software",
+        "url": "https://www.ibm.com"
+      },
+      {
+        "name": "Nutanix",
+        "logo": "/images/partners/nutanix.png",
+        "category": "Software-defined HCI",
+        "url": "https://www.nutanix.com"
+      },
+      {
+        "name": "Veeam",
+        "logo": "/images/partners/veeam.png",
+        "category": "Backup, replication & disaster recovery",
+        "url": "https://www.veeam.com"
+      },
+      {
+        "name": "Quantum",
+        "logo": "/images/partners/quantum.png",
+        "category": "Storage",
+        "url": "https://www.quantum.com"
+      },
+      {
+        "name": "Microsoft",
+        "logo": "/images/partners/microsoft.png",
+        "category": "Windows, Server, SQL & Microsoft 365",
+        "url": "https://www.microsoft.com"
+      },
+      {
+        "name": "Microsoft Azure",
+        "logo": "/images/partners/azure.png",
+        "category": "Cloud platform",
+        "url": "https://azure.microsoft.com"
+      },
+      {
+        "name": "Google Cloud",
+        "logo": "/images/partners/google-cloud.png",
+        "category": "Cloud platform",
+        "url": "https://cloud.google.com"
+      },
+      {
+        "name": "Red Hat",
+        "logo": "/images/partners/redhat.png",
+        "category": "Enterprise Linux & container orchestration",
+        "url": "https://www.redhat.com"
+      },
+      {
+        "name": "Mitel",
+        "logo": "/images/partners/mitel.png",
+        "category": "Unified communications",
+        "url": "https://www.mitel.com"
+      },
+      {
+        "name": "Avaya",
+        "logo": "/images/partners/avaya.png",
+        "category": "Unified communications",
+        "url": "https://www.avaya.com"
+      },
+      {
+        "name": "3CX",
+        "logo": "/images/partners/3cx.png",
+        "category": "IP telephony",
+        "url": "https://www.3cx.com"
+      },
+      {
+        "name": "Hikvision",
+        "logo": "/images/partners/hikvision.png",
+        "category": "Video surveillance",
+        "url": "https://www.hikvision.com"
+      },
+      {
+        "name": "Dahua Technology",
+        "logo": "/images/partners/dahua.png",
+        "category": "Video surveillance",
+        "url": "https://www.dahuasecurity.com"
+      },
+      {
+        "name": "ZKTeco",
+        "logo": "/images/partners/zkteco.png",
+        "category": "Access control & biometrics",
+        "url": "https://www.zkteco.com"
+      }
+    ]
+  },
+  "why": {
+    "principles": [
+      {
+        "index": "01",
+        "title": "Engineering Expertise",
+        "text": "Founded and led by engineers with 20+ years of combined leadership across national and international ICT infrastructure programmes."
+      },
+      {
+        "index": "02",
+        "title": "End-to-End Delivery",
+        "text": "Consultancy, design, supply, implementation, training and support — one accountable team from first workshop to handover."
+      },
+      {
+        "index": "03",
+        "title": "Security by Design",
+        "text": "Threat models, segmentation and compliance obligations shape the architecture from the first review, not the last."
+      },
+      {
+        "index": "04",
+        "title": "Enterprise Reliability",
+        "text": "Documented, tested and supportable systems built to the availability targets government and financial institutions require."
+      },
+      {
+        "index": "05",
+        "title": "Local Execution",
+        "text": "A strong Addis Ababa delivery team with on-the-ground presence, regulatory understanding and rapid response."
+      },
+      {
+        "index": "06",
+        "title": "Long-Term Partnership",
+        "text": "We measure success in years of reliable operation, not in deliveries — relationships rooted in trust and measurable value."
+      }
+    ]
+  },
+  "careers": {
+    "values": [
+      {
+        "title": "Build infrastructure that matters",
+        "text": "Our projects power banks, public institutions and enterprises. The work is visible, consequential and technically demanding."
+      },
+      {
+        "title": "Learn from senior engineers",
+        "text": "Work alongside people who have led national-scale ICT programmes and bring that discipline to every design review."
+      },
+      {
+        "title": "Grow with the region",
+        "text": "Ethiopia and East Africa are building their digital foundations. Be part of the team engineering them."
+      }
+    ],
+    "openRoles": []
+  }
+}

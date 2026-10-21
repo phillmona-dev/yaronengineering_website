@@ -1,13 +1,15 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 import { Logo } from "@/components/ui/Logo";
 import { GridLines } from "@/components/ui/Backdrop";
-import { getSiteContent } from "@/lib/content/server";
+import { useSiteContent } from "@/lib/content/context";
 import { phoneToE164 } from "@/lib/content/highlight";
 
-export async function Footer() {
-  const { company, navigation } = await getSiteContent();
+export function Footer() {
+  const { company, navigation } = useSiteContent();
   const footerNav = navigation.footer;
   const legalNav = navigation.legal;
   const year = new Date().getFullYear();
@@ -109,8 +111,8 @@ export async function Footer() {
               </Link>
             ))}
             <span className="hidden md:inline">
-              {company.headquarters.city} · {company.headquarters.lat.toFixed(2)}°N{" "}
-              {company.headquarters.lng.toFixed(2)}°E
+              {company.headquarters.city} · {(company.headquarters.lat ?? 9.02).toFixed(2)}°N{" "}
+              {(company.headquarters.lng ?? 38.83).toFixed(2)}°E
             </span>
           </div>
         </div>

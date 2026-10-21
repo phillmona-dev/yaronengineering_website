@@ -1,6 +1,11 @@
 Options -MultiViews
 RewriteEngine On
 
+# ─── Force HTTPS ────────────────────────────────────────────────────────────
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
 # ─── Security Headers ───────────────────────────────────────────────────────
 <IfModule mod_headers.c>
     Header always set X-Content-Type-Options "nosniff"
@@ -32,7 +37,7 @@ RewriteEngine On
 # ─── Next.js Static Export Routing ──────────────────────────────────────────
 # Next.js exports each page as /page-name/index.html (trailingSlash mode)
 # Apache can serve these without rewrite rules IF DirectoryIndex is set.
-DirectoryIndex index.html
+DirectoryIndex index.html index.php
 
 # ─── API Routes for cPanel (PHP) ──────────────────────────────────────────
 RewriteRule ^api/ai-chat/?$ /api/ai-chat.php [L,QSA]
