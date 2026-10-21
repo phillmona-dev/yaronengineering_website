@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Static export — generates a plain out/ folder deployable to any web host (cPanel, S3, etc.)
   output: "export",
+  trailingSlash: true,
   reactStrictMode: true,
   poweredByHeader: false,
   // The dev overlay bubble sits bottom-left, exactly where the WhatsApp button lives.

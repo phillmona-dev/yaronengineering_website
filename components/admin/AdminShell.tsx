@@ -160,11 +160,18 @@ function Shell({ children }: { children: React.ReactNode }) {
           {desktopAlerts ? "Desktop alerts on" : "Enable desktop alerts"}
         </button>
         <Link
-          href="/blog"
+          href="/"
           target="_blank"
           className="text-ink-500 hover:text-ink-900 flex h-9 items-center gap-3 rounded-md px-3 text-sm hover:bg-white/70"
         >
           <ExternalLink className="size-4" aria-hidden /> View site
+        </Link>
+        <Link
+          href="/blog"
+          target="_blank"
+          className="text-ink-500 hover:text-ink-900 flex h-9 items-center gap-3 rounded-md px-3 text-sm hover:bg-white/70"
+        >
+          <ExternalLink className="size-4" aria-hidden /> View Insights
         </Link>
         <div className="mt-2 flex items-center justify-between rounded-md px-3 py-2">
           <div className="min-w-0">
