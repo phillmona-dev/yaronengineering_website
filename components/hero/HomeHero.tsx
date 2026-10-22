@@ -29,43 +29,43 @@ export function HomeHero() {
 
   return (
     <section
-      data-theme="dark"
-      className="bg-ink-950 text-foreground relative isolate overflow-hidden"
+      data-theme="light"
+      className="bg-background text-foreground relative isolate overflow-hidden"
       aria-labelledby="hero-title"
     >
-      {/* Visual layer — pure brand colour, no photography */}
+      {/* Visual layer — paper-white composition with gold and graphite ornaments, no photography */}
       <m.div className="absolute inset-0 -z-10" style={reduce ? undefined : { y: imgY }}>
         <div aria-hidden className="hero-mesh absolute inset-0" />
-        {/* Drifting light-blue and gold blooms */}
+        {/* Drifting warm-grey and gold blooms */}
         <div
           aria-hidden
           className="hero-blob top-[-10%] right-[-5%] h-[55vw] max-h-[720px] w-[55vw] max-w-[720px] opacity-70"
           style={{
-            background: "radial-gradient(closest-side, rgba(108,166,238,0.55), transparent 70%)",
+            background: "radial-gradient(closest-side, rgba(255,255,255,0.95), transparent 70%)",
           }}
         />
         <div
           aria-hidden
-          className="hero-blob bottom-[-20%] left-[-10%] h-[40vw] max-h-[520px] w-[40vw] max-w-[520px] opacity-60 [animation-delay:-7s]"
+          className="hero-blob bottom-[-20%] left-[-10%] h-[40vw] max-h-[520px] w-[40vw] max-w-[520px] opacity-70 [animation-delay:-7s]"
           style={{
-            background: "radial-gradient(closest-side, rgba(245,197,24,0.28), transparent 70%)",
+            background: "radial-gradient(closest-side, rgba(245,197,24,0.3), transparent 70%)",
           }}
         />
         <div
           aria-hidden
           className="hero-blob top-[35%] left-[30%] h-[36vw] max-h-[480px] w-[36vw] max-w-[480px] opacity-50 [animation-delay:-11s]"
           style={{
-            background: "radial-gradient(closest-side, rgba(63,130,220,0.6), transparent 70%)",
+            background: "radial-gradient(closest-side, rgba(255,255,255,0.9), transparent 70%)",
           }}
         />
         {/* Orbit ornament behind the capability panel */}
-        <HeroOrbits className="absolute top-1/2 right-[-14%] hidden w-[58vw] max-w-[980px] -translate-y-[46%] opacity-80 lg:block" />
-        <NetworkLines className="absolute inset-0 h-full w-full opacity-[0.45] mix-blend-screen" />
-        <div aria-hidden className="grid-lines absolute inset-0 text-white opacity-40" />
+        <HeroOrbits className="absolute top-1/2 right-[-14%] hidden w-[58vw] max-w-[980px] -translate-y-[46%] opacity-70 lg:block" />
+        <NetworkLines className="absolute inset-0 h-full w-full opacity-[0.28]" />
+        <div aria-hidden className="grid-lines absolute inset-0 text-black opacity-30" />
         {/* Gold diagonal hairline — the logo's circuit trace, abstracted */}
         <div
           aria-hidden
-          className="from-gold-500/0 via-gold-500/50 to-gold-500/0 absolute top-0 right-[38%] hidden h-[140%] w-px origin-top rotate-[22deg] bg-gradient-to-b lg:block"
+          className="from-gold-500/0 via-gold-500/70 to-gold-500/0 absolute top-0 right-[38%] hidden h-[140%] w-px origin-top rotate-[22deg] bg-gradient-to-b lg:block"
         />
       </m.div>
 
@@ -75,7 +75,7 @@ export function HomeHero() {
         <div className="lg:col-span-7">
           <m.p
             {...fade(0.25)}
-            className="border-gold-500/40 bg-gold-500/10 text-gold-300 font-label inline-flex items-center gap-2.5 rounded-full border px-3.5 py-1.5 text-[0.7rem] font-semibold tracking-[0.14em] uppercase"
+            className="border-gold-500/60 bg-gold-500/15 text-foreground font-label inline-flex items-center gap-2.5 rounded-full border px-3.5 py-1.5 text-[0.7rem] font-semibold tracking-[0.14em] uppercase"
           >
             <span className="relative flex size-1.5">
               <span className="animate-pulse-soft bg-gold-400 absolute inset-0 rounded-full" />
@@ -87,7 +87,7 @@ export function HomeHero() {
           <TextReveal
             as="h1"
             delay={0.4}
-            className="text-h1 mt-7 font-bold text-white"
+            className="text-h1 text-foreground mt-7 font-bold"
             lines={hero.titleLines.map((line, i) => (
               <span key={i}>
                 <GoldHighlight text={line} highlight={hero.highlight} />
@@ -98,7 +98,7 @@ export function HomeHero() {
             {hero.titleLines.join(" ")}
           </div>
 
-          <m.p {...fade(0.9)} className="text-lead text-ink-200 mt-6 max-w-[50ch]">
+          <m.p {...fade(0.9)} className="text-lead text-muted-foreground mt-6 max-w-[50ch]">
             {hero.lead}
           </m.p>
 
@@ -117,8 +117,8 @@ export function HomeHero() {
           </m.div>
 
           {/* Trust row */}
-          <m.div {...fade(1.3)} className="mt-10 border-t border-white/10 pt-5">
-            <p className="text-ink-400 font-label text-[0.7rem] font-semibold tracking-[0.14em] uppercase">
+          <m.div {...fade(1.3)} className="border-border mt-10 border-t pt-5">
+            <p className="text-muted-foreground font-label text-[0.7rem] font-semibold tracking-[0.14em] uppercase">
               Trusted by
             </p>
             <ul className="mt-4 flex flex-wrap items-center gap-3">
@@ -133,7 +133,7 @@ export function HomeHero() {
                       rel="noopener noreferrer"
                       title={`${c.name} — official website`}
                       aria-label={`${c.name} — visit official website (opens in a new tab)`}
-                      className="client-chip focus-visible:ring-gold-400 block rounded-md bg-white/90 px-3 py-2 opacity-90 focus-visible:ring-2 focus-visible:outline-none"
+                      className="client-chip focus-visible:ring-gold-400 border-border block rounded-md border bg-white px-3 py-2 focus-visible:ring-2 focus-visible:outline-none"
                     >
                       <Image
                         src={c.logo}
@@ -166,13 +166,13 @@ export function HomeHero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.5 }}
-          className="text-ink-400 font-label flex flex-wrap items-center gap-x-10 gap-y-3 border-t border-white/10 pt-6 text-[0.7rem] font-semibold tracking-[0.14em] uppercase lg:col-span-12"
+          className="text-muted-foreground border-border font-label flex flex-wrap items-center gap-x-10 gap-y-3 border-t pt-6 text-[0.7rem] font-semibold tracking-[0.14em] uppercase lg:col-span-12"
         >
           <dl className="flex flex-wrap gap-x-10 gap-y-3">
             {hero.dataPoints.map((d) => (
               <div key={d.label} className="flex gap-3">
-                <dt className="text-ink-400">{d.label}</dt>
-                <dd className="text-ink-300">{d.value}</dd>
+                <dt className="text-muted-foreground">{d.label}</dt>
+                <dd className="text-foreground">{d.value}</dd>
               </div>
             ))}
           </dl>
