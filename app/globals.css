@@ -4,27 +4,42 @@
 
 @theme {
   /* ---------- Palette ---------- */
-  /* Brand blue scale — the logo's royal blue. Dark sections sit on ink-950, which is a
-     saturated royal blue (not navy / blue-black) so the brand reads as blue everywhere. */
-  --color-ink-950: #1540a6;
-  --color-ink-900: #1b49b4;
-  --color-ink-850: #2152bf;
-  --color-ink-800: #2a5ec9;
-  --color-ink-700: #3369d1;
-  --color-ink-600: #3f76d6;
-  --color-ink-500: #6a97e0;
-  --color-ink-400: #9dbdee;
-  --color-ink-300: #bcd2f3;
-  --color-ink-200: #d6e4f9;
-  --color-ink-100: #e9f1fc;
-  --color-ink-50: #f3f7fd;
+  /* Neutral "ink" scale — the page is black, white and warm grey. Dark sections sit on
+     ink-950 (a deep charcoal, never blue); ink-100..400 are the light tints used for secondary
+     text on those sections. Blue is reserved for the navigation bar and the footer (see
+     --color-navy below) and appears nowhere else on the public site. */
+  --color-ink-950: #0f1114;
+  --color-ink-900: #15181d;
+  --color-ink-850: #1b1f25;
+  --color-ink-800: #22272e;
+  --color-ink-700: #2d333c;
+  --color-ink-600: #3d4551;
+  --color-ink-500: #6b7380;
+  --color-ink-400: #c3c8d0;
+  --color-ink-300: #d9dde3;
+  --color-ink-200: #e9ebef;
+  --color-ink-100: #f3f4f6;
+  --color-ink-50: #f8f9fa;
 
-  /* Primary — logo light blue */
-  --color-brand-300: #a6ccf7;
-  --color-brand-400: #6ca6ee;
-  --color-brand-500: #3f82dc;
-  --color-brand-600: #2f6fcf;
-  --color-brand-700: #2560c4;
+  /* Sky blue — a very light tint of the logo blue, used ONLY by the top navigation bar
+     (and its dropdown / mobile menu) and the footer. Text on it is black. */
+  --color-sky-50: #f3f9fd;
+  --color-sky-100: #e3f2fb;
+  --color-sky-200: #cfe8f8;
+  --color-sky-300: #a9d5ef;
+  --color-sky-400: #7fbfe6;
+
+  /* Royal logo blue — admin panel chrome and the share image only. */
+  --color-navy: #1540a6;
+  --color-navy-deep: #10338a;
+  --color-navy-dark: #0c2767;
+
+  /* "brand" scale — a slate grey used for subtle lines, ornaments and glows. */
+  --color-brand-300: #d7dbe2;
+  --color-brand-400: #a3abb8;
+  --color-brand-500: #6b7483;
+  --color-brand-600: #4a5260;
+  --color-brand-700: #343b47;
 
   /* Secondary — logo gold */
   --color-gold-300: #ffe98a;
@@ -75,7 +90,7 @@
   --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-in-out-soft: cubic-bezier(0.65, 0, 0.35, 1);
 
-  --shadow-media: 0 1px 0 rgba(21, 64, 166, 0.05), 0 24px 48px -24px rgba(21, 64, 166, 0.3);
+  --shadow-media: 0 1px 0 rgba(0, 0, 0, 0.04), 0 24px 48px -24px rgba(15, 17, 20, 0.28);
 
   --animate-drift: drift 28s linear infinite;
   --animate-pulse-soft: pulse-soft 3.2s ease-in-out infinite;
@@ -145,55 +160,68 @@
 /* ---------- Theme tokens ---------- */
 :root,
 [data-theme="light"] {
-  /* Light sections are a soft brand-blue tint, never flat white; cards sit white on top. */
-  --background: #eaf1fc;
-  --foreground: #143a8c;
-  --muted: #dde7f7;
-  --muted-foreground: #41619f;
-  --border: #cfddf3;
-  --border-strong: #b4c9ec;
+  /* Light sections are clean white (soft tone: a warm light grey); cards sit white on top.
+     All text is pure black (the owner rejected grey "pencil" text), including secondary copy.
+     The "brand" role on light surfaces is the logo gold, darkened for legibility. */
+  --background: #ffffff;
+  --foreground: #000000;
+  --muted: #f3f4f6;
+  --muted-foreground: #000000;
+  --border: #e4e7eb;
+  --border-strong: #c9ced6;
   --surface: #ffffff;
   --surface-elevated: #ffffff;
-  --brand: #3f82dc;
-  --brand-hover: #2f6fcf;
-  --brand-foreground: #ffffff;
-  --brand-text: #2560c4;
+  --brand: #b08808;
+  --brand-hover: #8a6a05;
+  --brand-foreground: #000000;
+  --brand-text: #8a6a05;
   --accent: #f5c518;
   --accent-hover: #d9a90c;
-  --accent-foreground: #143a8c;
+  --accent-foreground: #000000;
   --accent-text: #a07a06;
   color-scheme: light;
 }
 
 [data-theme="dark"] {
-  --background: #1540a6;
-  --foreground: #f3f7fd;
-  --muted: #1b49b4;
-  --muted-foreground: #bcd2f3;
-  --border: #2f63cc;
-  --border-strong: #4a7bd8;
-  --surface: #1b49b4;
-  --surface-elevated: #2152bf;
-  --brand: #3f82dc;
-  --brand-hover: #6ca6ee;
-  --brand-foreground: #ffffff;
-  --brand-text: #a6ccf7;
+  --background: #0f1114;
+  --foreground: #ffffff;
+  --muted: #1b1f25;
+  --muted-foreground: #d9dde3;
+  --border: #2d333c;
+  --border-strong: #3d4551;
+  --surface: #15181d;
+  --surface-elevated: #1b1f25;
+  --brand: #f5c518;
+  --brand-hover: #fbd84a;
+  --brand-foreground: #000000;
+  --brand-text: #fbd84a;
   --accent: #f5c518;
   --accent-hover: #fbd84a;
-  --accent-foreground: #1540a6;
+  --accent-foreground: #000000;
   --accent-text: #fbd84a;
   color-scheme: dark;
 }
 
 [data-theme="dark"][data-tone="soft"] {
-  --background: #1b49b4;
-  --surface: #2152bf;
+  --background: #15181d;
+  --surface: #1b1f25;
 }
 
 [data-theme="light"][data-tone="soft"] {
-  --background: #e0eafa;
+  --background: #f5f6f8;
   --surface: #ffffff;
-  --border: #c6d6f0;
+  --border: #dfe3e8;
+}
+
+/* Admin dashboard: text on its white cards is pure black, never blue or grey. */
+.admin-ui {
+  --color-ink-900: #000000;
+  --color-ink-800: #000000;
+  --color-ink-700: #000000;
+  --color-ink-600: #000000;
+  --color-ink-500: #000000;
+  --color-ink-400: #000000;
+  --color-ink-300: #000000;
 }
 
 /* ---------- Base ---------- */
@@ -264,18 +292,21 @@
 [data-theme="dark"] + [data-theme="light"] {
   box-shadow: 0 -1px 0 0 rgba(255, 255, 255, 0.75);
 }
-/* Light sections carry a soft light-blue wash in one corner so they never read as flat white */
+/* Every public section is light. Adjacent sections are separated by a hairline, and each
+   carries a whisper of warm grey in one corner so the page never reads as flat white. */
 @layer components {
   section[data-theme="light"],
   footer[data-theme="light"],
   div[data-theme="light"].section-y {
-    background-image:
-      radial-gradient(70% 60% at 100% 0%, rgba(166, 204, 247, 0.4), transparent 65%),
-      radial-gradient(50% 50% at 0% 100%, rgba(255, 255, 255, 0.8), transparent 60%);
+    background-image: radial-gradient(70% 60% at 100% 0%, rgba(15, 17, 20, 0.035), transparent 65%);
+  }
+  main > section[data-theme="light"] + section[data-theme="light"],
+  main > section[data-theme="light"] + div[data-theme="light"] {
+    border-top: 1px solid var(--border);
   }
 }
 [data-theme="light"] + [data-theme="dark"] {
-  box-shadow: 0 -24px 48px -32px rgba(21, 64, 166, 0.45);
+  box-shadow: 0 -24px 48px -32px rgba(0, 0, 0, 0.35);
 }
 
 /* ---------- Utilities ---------- */
@@ -321,41 +352,37 @@
 }
 
 @utility image-overlay {
+  /* Neutral shade at the bottom only, so captions stay readable while the photo keeps its
+     true colours. */
   background: linear-gradient(
     to top,
-    #1540a6 0%,
-    rgba(21, 64, 166, 0.7) 38%,
-    rgba(21, 64, 166, 0.15) 100%
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.3) 35%,
+    rgba(0, 0, 0, 0) 65%
   );
 }
 
-/* ---------- Blue duotone imagery ----------
-   Photos inside dark sections are desaturated and re-coloured so their shadows lift to
-   the brand's royal blue and their highlights fall to the logo's light blue. This is what
-   stops dark stock photography dragging the whole page towards blue-black. Apply
-   `duotone-media` to the image/video element and place `duotone-shadows` + `duotone-lights`
-   layers above it. */
+/* ---------- Photo treatment ----------
+   Photos are shown in their natural colours (the owner asked for images to be seen clearly,
+   not tinted blue). The former duotone utilities are kept as no-ops so existing markup still
+   compiles: `duotone-media` leaves the image untouched and the two blend layers are hidden. */
 @utility duotone-media {
-  filter: grayscale(1) contrast(1.05);
+  filter: none;
 }
 @utility duotone-shadows {
-  background: #1540a6;
-  mix-blend-mode: lighten;
+  display: none;
 }
 @utility duotone-lights {
-  background: #9cc6f5;
-  mix-blend-mode: multiply;
+  display: none;
 }
 
-/* ---------- Brand hero backdrop ----------
-   The hero is pure brand colour: a diagonal royal-to-light-blue gradient with a light-blue
-   bloom top-right and a faint gold bloom bottom-left. No photography. */
+/* ---------- Hero backdrop ----------
+   Clean white hero backdrop with a warm gold bloom bottom-left and white bloom top-right. */
 @utility hero-mesh {
   background:
-    radial-gradient(55% 55% at 88% 12%, rgba(108, 166, 238, 0.65), transparent 70%),
-    radial-gradient(40% 45% at 8% 95%, rgba(245, 197, 24, 0.2), transparent 70%),
-    radial-gradient(60% 50% at 50% 115%, rgba(13, 42, 120, 0.85), transparent 70%),
-    linear-gradient(135deg, #1540a6 0%, #1d4fba 48%, #2a62cc 100%);
+    radial-gradient(55% 55% at 88% 10%, rgba(255, 255, 255, 1), transparent 70%),
+    radial-gradient(40% 45% at 6% 96%, rgba(245, 197, 24, 0.12), transparent 70%),
+    linear-gradient(180deg, #ffffff 0%, #fafbfc 60%, #f4f6f8 100%);
 }
 
 /* Slowly drifting blurred blobs that give the hero depth and motion */
@@ -580,14 +607,14 @@ html[data-cursor="custom"] .ai-msg-bubble p {
   border-radius: 4px;
 }
 .prose-article pre {
-  background: #143a8c;
-  color: #e4ebf8;
+  background: #0f2a3d;
+  color: #e5eef5;
   border-radius: var(--radius-md);
   padding: 1.25rem 1.5rem;
   overflow-x: auto;
   font-size: 0.85rem;
   line-height: 1.65;
-  border: 1px solid #2a5ec9;
+  border: 1px solid #1f3f57;
 }
 .prose-article pre code {
   background: transparent;
@@ -723,8 +750,8 @@ html[data-cursor="custom"] .ai-msg-bubble p {
     border: 1px solid rgba(255, 255, 255, 0.78);
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.95),
-      0 0 0 1px rgba(21, 64, 166, 0.04),
-      0 24px 60px -28px rgba(21, 64, 166, 0.28);
+      0 0 0 1px rgba(0, 0, 0, 0.04),
+      0 24px 60px -28px rgba(15, 17, 20, 0.28);
     -webkit-backdrop-filter: blur(20px) saturate(170%);
     backdrop-filter: blur(20px) saturate(170%);
   }
@@ -732,11 +759,11 @@ html[data-cursor="custom"] .ai-msg-bubble p {
     background: rgba(255, 255, 255, 0.72);
   }
   .glass-dark {
-    background: linear-gradient(135deg, rgba(21, 64, 166, 0.94), rgba(33, 82, 191, 0.88));
+    background: linear-gradient(135deg, rgba(21, 64, 166, 0.96), rgba(16, 51, 138, 0.92));
     border-color: rgba(255, 255, 255, 0.12);
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.12),
-      0 30px 70px -30px rgba(21, 64, 166, 0.7);
+      0 30px 70px -30px rgba(21, 64, 166, 0.6);
   }
   /* Square grid behind the admin pages (no colour wash) */
   .admin-grid {
@@ -745,8 +772,8 @@ html[data-cursor="custom"] .ai-msg-bubble p {
     z-index: 0;
     pointer-events: none;
     background-image:
-      linear-gradient(rgba(21, 64, 166, 0.055) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(21, 64, 166, 0.055) 1px, transparent 1px);
+      linear-gradient(rgba(15, 17, 20, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(15, 17, 20, 0.05) 1px, transparent 1px);
     background-size: 36px 36px;
     mask-image: radial-gradient(ellipse at 40% 0%, #000 30%, rgba(0, 0, 0, 0.35) 100%);
     -webkit-mask-image: radial-gradient(ellipse at 40% 0%, #000 30%, rgba(0, 0, 0, 0.35) 100%);
@@ -759,7 +786,7 @@ html[data-cursor="custom"] .ai-msg-bubble p {
   .glass-sidebar {
     background: rgba(255, 255, 255, 0.72);
     border-right: 1px solid rgba(255, 255, 255, 0.85);
-    box-shadow: 0 0 0 1px rgba(21, 64, 166, 0.04);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04);
     -webkit-backdrop-filter: blur(24px) saturate(170%);
     backdrop-filter: blur(24px) saturate(170%);
   }
@@ -790,9 +817,9 @@ html[data-cursor="custom"] .ai-msg-bubble p {
   .dash-shimmer {
     background: linear-gradient(
       100deg,
-      rgba(21, 64, 166, 0.05) 30%,
+      rgba(15, 17, 20, 0.05) 30%,
       rgba(255, 255, 255, 0.7) 50%,
-      rgba(21, 64, 166, 0.05) 70%
+      rgba(15, 17, 20, 0.05) 70%
     );
     background-size: 200% 100%;
     animation: dash-shimmer 1.6s linear infinite;
@@ -834,10 +861,10 @@ html[data-cursor="custom"] .ai-msg-bubble p {
     background: conic-gradient(
       from var(--client-angle),
       transparent 0deg,
-      var(--color-brand-500) 70deg,
-      var(--color-gold-500) 140deg,
+      var(--color-gold-500) 70deg,
+      var(--color-gold-300) 140deg,
       transparent 210deg,
-      var(--color-brand-500) 300deg,
+      var(--color-gold-500) 300deg,
       transparent 360deg
     );
     -webkit-mask:
@@ -859,7 +886,7 @@ html[data-cursor="custom"] .ai-msg-bubble p {
     border-radius: inherit;
     background: radial-gradient(
       closest-side,
-      color-mix(in oklab, var(--color-brand-500) 45%, transparent),
+      color-mix(in oklab, var(--color-gold-500) 35%, transparent),
       transparent
     );
     filter: blur(22px);
@@ -902,7 +929,7 @@ html[data-cursor="custom"] .ai-msg-bubble p {
   .client-card:hover .client-logo img,
   .client-card:focus-visible .client-logo img {
     transform: translateY(-3px) scale(1.08);
-    filter: drop-shadow(0 8px 14px rgba(21, 64, 166, 0.18));
+    filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.16));
   }
 
   /* Small hero "Trusted by" chips. */
@@ -928,7 +955,7 @@ html[data-cursor="custom"] .ai-msg-bubble p {
     transform: translateY(-4px) scale(1.06);
     box-shadow:
       0 0 0 2px var(--color-gold-500),
-      0 12px 28px -10px color-mix(in oklab, var(--color-brand-500) 70%, transparent);
+      0 12px 28px -10px rgba(0, 0, 0, 0.35);
     opacity: 1;
   }
   .client-chip:hover::after,
@@ -979,9 +1006,9 @@ html[data-cursor="custom"] .ai-msg-bubble p {
       }
       @keyframes section-drop {
         from {
-          opacity: 0.15;
-          transform: translateY(90px) scale(0.94);
-          filter: blur(6px);
+          opacity: 0.2;
+          transform: translateY(56px) scale(0.975);
+          filter: blur(2px);
         }
         to {
           opacity: 1;

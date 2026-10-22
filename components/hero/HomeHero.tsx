@@ -30,7 +30,7 @@ export function HomeHero() {
   return (
     <section
       data-theme="light"
-      className="bg-background text-foreground relative isolate overflow-hidden"
+      className="bg-white text-foreground relative isolate overflow-hidden"
       aria-labelledby="hero-title"
     >
       {/* Visual layer — paper-white composition with gold and graphite ornaments, no photography */}
